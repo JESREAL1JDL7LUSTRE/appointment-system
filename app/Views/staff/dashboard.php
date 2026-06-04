@@ -38,14 +38,14 @@
         <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-slate-100 p-6">
             <div class="flex justify-between items-center mb-6">
                 <h3 class="text-lg font-semibold text-slate-800">Today's Agenda</h3>
-                <span class="text-sm text-slate-500 font-medium">Oct 24, 2024</span>
+                <span class="text-sm text-slate-500 font-medium"><?= esc(date('M d, Y')) ?></span>
             </div>
             
             <div class="relative border-l-2 border-slate-200 ml-4 space-y-8 pb-4">
-                <?php if (!empty($recent_appointments) && is_array($recent_appointments)): ?>
+                <?php if (!empty($today_appointments) && is_array($today_appointments)): ?>
                     <?php 
                     $isFirst = true;
-                    foreach ($recent_appointments as $appointment): 
+                    foreach ($today_appointments as $appointment): 
                         // Determine border color based on status or if it's the next appointment
                         $colorClass = $isFirst ? 'blue' : 'emerald';
                         $isFirst = false;
@@ -88,16 +88,16 @@
                     <div class="flex justify-between items-center pb-3 border-b border-slate-100">
                         <div class="flex items-center text-slate-600">
                             <i class="ph ph-check-circle text-emerald-500 mr-2 text-lg"></i>
-                            <span class="text-sm font-medium">Completed</span>
+                            <span class="text-sm font-medium">Completed this month</span>
                         </div>
-                        <span class="font-bold text-slate-800"><?= esc($stats['completed_this_week'] ?? 0) ?></span>
+                        <span class="font-bold text-slate-800"><?= esc($stats['completed_month'] ?? 0) ?></span>
                     </div>
                     <div class="flex justify-between items-center pb-3 border-b border-slate-100">
                         <div class="flex items-center text-slate-600">
                             <i class="ph ph-calendar text-blue-500 mr-2 text-lg"></i>
-                            <span class="text-sm font-medium">Upcoming</span>
+                            <span class="text-sm font-medium">Upcoming 7 Days</span>
                         </div>
-                        <span class="font-bold text-slate-800"><?= esc($stats['upcoming_this_week'] ?? 0) ?></span>
+                        <span class="font-bold text-slate-800"><?= esc($stats['upcoming_week'] ?? 0) ?></span>
                     </div>
                     <div class="flex justify-between items-center">
                         <div class="flex items-center text-slate-600">

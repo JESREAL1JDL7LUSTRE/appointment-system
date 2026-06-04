@@ -5,6 +5,8 @@ namespace App\Controllers;
 use App\Models\AppointmentModel;
 use App\Models\ServiceModel;
 use App\Models\UserModel;
+use App\Models\UserRoleModel;
+use App\Models\StaffProfileModel;
 
 class Admin extends BaseController
 {
@@ -149,5 +151,121 @@ class Admin extends BaseController
 
         $data['appointments'] = $appointments;
         return view('admin/appointments', $data);
+    }
+    
+    public function staff()
+    {
+        $userModel = new UserModel();
+        // Join with user_roles to get only role_id = 2, and join staff_profiles
+        $staffRaw = $userModel
+            ->select('users.id, users.first_name, users.last_name, users.email, users.phone, users.is_active, users.created_at, sp.title, sp.is_available')
+            ->join('user_roles ur', 'ur.user_id = users.id')
+            ->join('staff_profiles sp', 'sp.user_id = users.id', 'left')
+            ->where('ur.role_id', 2)
+            ->findAll();
+            
+        $data['staff_members'] = $staffRaw;
+        return view('admin/staff', $data);
+    }
+    
+    public function createStaff()
+    {
+        $userModel = new UserModel();
+        $userRoleModel = new UserRoleModel();
+        $staffProfileModel = new StaffProfileModel();
+        
+        $db = \Config\Database::connect();
+        $db->transStart();
+        
+        $userData = [
+            'first_name' => $this->request->getPost('first_name'),
+            'last_name' => $this->request->getPost('last_name'),
+            'email' => $this->request->getPost('email'),
+            'phone' => $this->request->getPost('phone'),
+            'password_hash' => password_hash($this->request->getPost('password'), PASSWORD_DEFAULT),
+            'is_active' => $this->request->getPost('is_active') ? 1 : 0
+        ];
+        
+        if (!$userModel->insert($userData)) {
+            $db->transRollback();
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to create user account.', 'errors' => $userModel->errors()]);
+        }
+        
+        $userId = $userModel->getInsertID();
+        
+        $userRoleModel->insert([
+            'user_id' => $userId,
+            'role_id' => 2 // Staff role
+        ]);
+        
+        $staffProfileModel->insert([
+            'user_id' => $userId,
+            'title' => $this->request->getPost('title') ?: 'Staff',
+            'is_available' => $this->request->getPost('is_available') ? 1 : 0,
+            'bio' => ''
+        ]);
+        
+        $db->transComplete();
+        
+        if ($db->transStatus() === false) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Database transaction failed.']);
+        }
+        
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Staff member created successfully.']);
+    }
+    
+    public function updateStaff($id)
+    {
+        $userModel = new UserModel();
+        $staffProfileModel = new StaffProfileModel();
+        
+        $db = \Config\Database::connect();
+        $db->transStart();
+        
+        $userData = [
+            'first_name' => $this->request->getPost('first_name'),
+            'last_name' => $this->request->getPost('last_name'),
+            'email' => $this->request->getPost('email'),
+            'phone' => $this->request->getPost('phone'),
+            'is_active' => $this->request->getPost('is_active') ? 1 : 0
+        ];
+        
+        if ($this->request->getPost('password')) {
+            $userData['password_hash'] = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
+        }
+        
+        $userModel->update($id, $userData);
+        
+        $profileData = [
+            'title' => $this->request->getPost('title'),
+            'is_available' => $this->request->getPost('is_available') ? 1 : 0
+        ];
+        
+        // Check if profile exists, if not create it
+        if ($staffProfileModel->find($id)) {
+            $staffProfileModel->update($id, $profileData);
+        } else {
+            $profileData['user_id'] = $id;
+            $profileData['bio'] = '';
+            $staffProfileModel->insert($profileData);
+        }
+        
+        $db->transComplete();
+        
+        if ($db->transStatus() === false) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Database transaction failed.']);
+        }
+        
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Staff member updated successfully.']);
+    }
+    
+    public function deleteStaff($id)
+    {
+        $userModel = new UserModel();
+        // Instead of hard delete, deactivate them for data integrity
+        if ($userModel->update($id, ['is_active' => 0])) {
+            return $this->response->setJSON(['status' => 'success', 'message' => 'Staff member deactivated successfully.']);
+        }
+        return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to deactivate staff member.']);
     }
 }

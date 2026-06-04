@@ -58,16 +58,20 @@ $routes->post('/logout', 'Home::logout');
 
 $routes->group('ui', function ($routes) {
     $routes->get('admin', 'Admin::dashboard');
-    $routes->get('admin/staff', 'UiPreview::adminStaff'); // Pending phase 2
+    $routes->get('admin/staff', 'Admin::staff');
+    $routes->post('admin/staff/create', 'Admin::createStaff');
+    $routes->post('admin/staff/update/(:num)', 'Admin::updateStaff/$1');
+    $routes->post('admin/staff/delete/(:num)', 'Admin::deleteStaff/$1');
     $routes->get('admin/services', 'Admin::services');
     $routes->post('admin/services/create', 'Admin::createService');
     $routes->post('admin/services/update/(:num)', 'Admin::updateService/$1');
     $routes->post('admin/services/delete/(:num)', 'Admin::deleteService/$1');
     $routes->get('admin/appointments', 'Admin::appointments');
     
-    $routes->get('staff', 'UiPreview::staffDashboard');
-    $routes->get('staff/schedule', 'UiPreview::staffSchedule');
-    $routes->get('staff/appointments', 'UiPreview::staffAppointments');
+    $routes->get('staff', 'Staff::dashboard');
+    $routes->get('staff/schedule', 'Staff::schedule');
+    $routes->get('staff/appointments', 'Staff::appointments');
+    $routes->post('staff/appointments/update-status/(:num)', 'Staff::updateAppointmentStatus/$1');
 });
 $routes->post('chatbot/ask', 'ChatbotController::ask');
 
