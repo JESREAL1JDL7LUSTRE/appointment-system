@@ -16,6 +16,7 @@ class AppointmentModelTest extends CIUnitTestCase
     
     // Seed all data so we have staff, clients, and services available
     protected $seed = 'App\Database\Seeds\MainSeeder';
+    protected $namespace = 'App';
 
     public function testAppointmentCreation()
     {
@@ -24,9 +25,9 @@ class AppointmentModelTest extends CIUnitTestCase
         $db = db_connect();
 
         // Grab a random client, staff, and service from seeded data
-        $client = $db->query("SELECT user_id FROM client_profiles LIMIT 1")->getRowArray();
-        $staff = $db->query("SELECT user_id FROM staff_profiles LIMIT 1")->getRowArray();
-        $service = $db->query("SELECT id FROM services LIMIT 1")->getRowArray();
+        $client = $db->table('client_profiles')->select('user_id')->limit(1)->get()->getRowArray();
+        $staff = $db->table('staff_profiles')->select('user_id')->limit(1)->get()->getRowArray();
+        $service = $db->table('services')->select('id')->limit(1)->get()->getRowArray();
         
         $this->assertNotNull($client, "No client profiles found.");
         $this->assertNotNull($staff, "No staff profiles found.");
