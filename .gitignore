@@ -1,4 +1,17 @@
 /vendor
 .env
-/writable/
 /node_modules/
+
+# Ignore everything inside the writable sub-folders
+writable/cache/*
+writable/logs/*
+writable/session/*
+writable/uploads/*
+writable/debugbar/*
+
+# BUT do not ignore the .gitkeep files (this forces Git to keep the folders)
+!writable/cache/.gitkeep
+!writable/logs/.gitkeep
+!writable/session/.gitkeep
+!writable/uploads/.gitkeep
+!writable/debugbar/.gitkeep
