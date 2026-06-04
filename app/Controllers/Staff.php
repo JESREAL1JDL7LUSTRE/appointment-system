@@ -50,7 +50,8 @@ class Staff extends BaseController
                 'service_name' => $apt['service_name'] ?? 'Unknown',
                 'start_time' => $apt['start_time'],
                 'end_time' => $apt['end_time'],
-                'status' => $apt['status']
+                'status' => $apt['status'],
+                'client_notes' => $apt['client_notes']
             ];
         }
 
@@ -92,7 +93,8 @@ class Staff extends BaseController
                 'appointment_date' => $apt['appointment_date'],
                 'start_time' => $apt['start_time'],
                 'end_time' => $apt['end_time'],
-                'status' => $apt['status']
+                'status' => $apt['status'],
+                'client_notes' => $apt['client_notes']
             ];
         }
 
