@@ -122,3 +122,44 @@ Stack trace:
 #12 E:\OJT\brox\appointment-system\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #13 E:\OJT\brox\appointment-system\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #14 {main}
+ERROR - 2026-06-04 05:25:22 --> Table 'staff_services' already exists
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('CREATE TABLE `staff_services` (
+	`staff_id` BIGINT(20) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NOT NULL,
+	CONSTRAINT `pk_staff_services` PRIMARY KEY(`staff_id`, `service_id`),
+	CONSTRAINT `staff_services_staff_id_foreign` FOREIGN KEY (`staff_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `staff_services_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `staff_services` (
+	`staff_id` BIGINT(20) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NOT NULL,
+	CONSTRAINT `pk_staff_services` PRIMARY KEY(`staff_id`, `service_id`),
+	CONSTRAINT `staff_services_staff_id_foreign` FOREIGN KEY (`staff_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `staff_services_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `staff_services` (
+	`staff_id` BIGINT(20) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NOT NULL,
+	CONSTRAINT `pk_staff_services` PRIMARY KEY(`staff_id`, `service_id`),
+	CONSTRAINT `staff_services_staff_id_foreign` FOREIGN KEY (`staff_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `staff_services_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 4 SYSTEMPATH\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `staff_services` (
+	`staff_id` BIGINT(20) UNSIGNED NOT NULL,
+	`service_id` INT(11) UNSIGNED NOT NULL,
+	CONSTRAINT `pk_staff_services` PRIMARY KEY(`staff_id`, `service_id`),
+	CONSTRAINT `staff_services_staff_id_foreign` FOREIGN KEY (`staff_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT `staff_services_service_id_foreign` FOREIGN KEY (`service_id`) REFERENCES `services`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci')
+ 5 APPPATH\Database\Migrations\2026-06-04-000009_CreateStaffServicesTable.php(26): CodeIgniter\Database\Forge->createTable('staff_services')
+ 6 SYSTEMPATH\Database\MigrationRunner.php(1014): App\Database\Migrations\CreateStaffServicesTable->up()
+ 7 SYSTEMPATH\Database\MigrationRunner.php(202): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+ 8 SYSTEMPATH\Commands\Database\Migrate.php(89): CodeIgniter\Database\MigrationRunner->latest(null)
+ 9 SYSTEMPATH\CLI\SignalTrait.php(245): CodeIgniter\Commands\Database\Migrate::CodeIgniter\Commands\Database\{closure}()
+10 SYSTEMPATH\Commands\Database\Migrate.php(88): CodeIgniter\Commands\Database\Migrate->withSignalsBlocked(Object(Closure))
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Migrate->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('migrate', [])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
