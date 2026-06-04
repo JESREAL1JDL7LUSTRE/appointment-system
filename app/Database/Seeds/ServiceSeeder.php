@@ -45,8 +45,7 @@ class ServiceSeeder extends Seeder
         // 2. Link Services to Staff
         // We know from UserSeeder that staff IDs will be roughly 2 through 6 (since Admin is 1)
         // For robustness, let's fetch staff IDs from the DB
-        $staffQuery = $this->db->query("SELECT user_id FROM staff_profiles");
-        $staffMembers = $staffQuery->getResultArray();
+        $staffMembers = $this->db->table('staff_profiles')->select('user_id')->get()->getResultArray();
 
         $staffServicesData = [];
         foreach ($staffMembers as $staff) {
