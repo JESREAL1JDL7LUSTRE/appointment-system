@@ -31,12 +31,17 @@ $routes->group('api', ['namespace' => 'App\Controllers\API'], static function ($
 
     // Staff Endpoints (Must be logged in as Staff)
     $routes->group('staff', ['filter' => 'role:Staff'], static function ($routes) {
-        // Future routes: $routes->get('schedule', 'ScheduleController::mySchedule');
+        $routes->post('working-hours', 'StaffController::setWorkingHours');
+        $routes->post('time-off', 'StaffController::requestTimeOff');
+        $routes->get('client-history/(:num)', 'ClientHistoryController::show/$1');
     });
 
     // Admin Endpoints (Must be logged in as Administrator)
     $routes->group('admin', ['filter' => 'role:Administrator'], static function ($routes) {
-        // Future routes: $routes->post('services', 'ServiceController::create');
+        $routes->get('reports/summary', 'AdminController::quickSummary');
+        $routes->get('reports/dynamic', 'AdminController::dynamicReport');
+        // Admin should also be able to access client history
+        $routes->get('client-history/(:num)', 'ClientHistoryController::show/$1');
     });
 
 });
