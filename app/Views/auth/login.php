@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA - Client Portal Authentication</title>
+    <title>OmniSchedule - Authentication</title>
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
@@ -58,7 +58,7 @@
             <div class="relative z-10 space-y-8">
                 <!-- Logo -->
                 <a href="<?= base_url('/') ?>" class="flex items-center gap-2 w-fit mb-8">
-                    <span class="font-serif text-3xl font-bold tracking-wider text-amber-400">AURA</span>
+                    <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-10 w-auto">
                 </a>
                 
                 <div class="space-y-4">

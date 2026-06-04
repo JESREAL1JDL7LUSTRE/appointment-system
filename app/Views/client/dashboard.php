@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA - Client Portal</title>
+    <title>OmniSchedule - Client Portal</title>
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
@@ -53,7 +53,7 @@
             <div class="flex items-center gap-8">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
-                    <span class="font-serif text-2xl font-bold tracking-wider text-amber-400">AURA</span>
+                    <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-10 w-auto">
                 </div>
                 <!-- Navigation -->
                 <nav class="hidden md:flex items-center gap-1">
@@ -697,7 +697,7 @@
 
     <!-- UI Footer -->
     <footer class="bg-stone-100 border-t border-stone-200/60 py-6 mt-12 text-center text-xs text-stone-500 mb-20 md:mb-0">
-        <p>&copy; <?= date('Y') ?> Aura Appointments. All rights reserved.</p>
+        <p>&copy; <?= date('Y') ?> OmniSchedule Appointments. All rights reserved.</p>
     </footer>
 
     <!-- Alpine.js Application Logic -->

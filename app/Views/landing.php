@@ -8,7 +8,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA - Premium Appointment Scheduling & Wellness</title>
+    <title>OmniSchedule - Premium Appointment Scheduling & Wellness</title>
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
@@ -23,7 +23,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
                 <!-- Logo -->
             <div class="flex items-center gap-2">
-                <span class="font-serif text-2xl font-bold tracking-wider text-amber-800">AURA</span>
+                <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-10 w-auto">
             </div>
 
             <!-- Desktop Nav Links -->
@@ -215,7 +215,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-amber-700 font-serif text-sm font-semibold tracking-wider uppercase mb-2 block">Client Reviews</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">What Our Clients Say</h2>
-                <p class="text-stone-500 mt-3 text-sm sm:text-base">Read feedback from clients who have experienced Aura's wellness consultations.</p>
+                <p class="text-stone-500 mt-3 text-sm sm:text-base">Read feedback from clients who have experienced OmniSchedule's wellness consultations.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -315,7 +315,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-amber-400 font-serif text-sm font-semibold tracking-wider uppercase mb-2 block">System Portals</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Access Aura Portal Applications</h2>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Access OmniSchedule Portal Applications</h2>
                 <p class="text-slate-400 mt-2 text-sm sm:text-base">Switch between customer-facing booking dashboard, staff calendars, or admin controls.</p>
             </div>
 
@@ -372,7 +372,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
                 <a href="#testimonials" class="hover:text-amber-700">Testimonials</a>
                 <a href="#faq" class="hover:text-amber-700">FAQ</a>
             </div>
-            <p class="text-stone-400">&copy; <?= date('Y') ?> Aura Appointments. All rights reserved.</p>
+            <p class="text-stone-400">&copy; <?= date('Y') ?> OmniSchedule Appointments. All rights reserved.</p>
         </div>
     </footer>
 

@@ -1,8 +1,7 @@
 <aside class="w-64 bg-primary text-stone-100 flex flex-col hidden md:flex transition-all duration-300 z-20 border-r border-primary-hover shadow-xl" id="sidebar">
     <!-- Logo -->
     <div class="h-20 flex items-center px-8 border-b border-primary-hover/50 bg-primary">
-        <i class="ph ph-calendar-check text-2xl mr-3 text-accent"></i>
-        <span class="text-xl font-serif font-bold tracking-wider text-white">AppointSys</span>
+        <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-8 w-auto">
     </div>
 
     <!-- Navigation -->
