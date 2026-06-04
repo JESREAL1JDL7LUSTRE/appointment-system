@@ -49,7 +49,9 @@ $routes->group('api', ['namespace' => 'App\Controllers\API'], static function ($
 // --------------------------------------------------------------------
 // UI Preview Routes
 // --------------------------------------------------------------------
-$routes->get('/dashboard', 'Home::dashboard');
+$routes->get('/dashboard', 'Client::dashboard');
+$routes->get('/client/appointments', 'Client::appointments');
+
 $routes->get('/login', 'Home::login');
 $routes->post('/login', 'Home::doLogin');
 $routes->post('/register', 'Home::doRegister');
