@@ -376,5 +376,6 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
         </div>
     </footer>
 
+    <?= $this->include('components/chatbot') ?>
 </body>
 </html>

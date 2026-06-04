@@ -188,7 +188,7 @@ function staffAppointmentManager(initialData) {
             formData.append('status', status);
             
             try {
-                const response = await fetch(`<?= base_url('staff/appointments/update-status') ?>/${id}`, {
+                const response = await fetch(`<?= base_url('ui/staff/appointments/update-status') ?>/${id}`, {
                     method: 'POST',
                     body: formData
                 });

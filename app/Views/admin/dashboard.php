@@ -64,7 +64,7 @@
     <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
         <div class="p-6 border-b border-slate-100 flex justify-between items-center">
             <h2 class="text-lg font-semibold text-slate-800">Recent Appointments</h2>
-            <a href="<?= base_url('admin/appointments') ?>" class="text-sm font-medium text-primary hover:text-primary-hover transition-colors">View All</a>
+            <a href="<?= base_url('ui/admin/appointments') ?>" class="text-sm font-medium text-primary hover:text-primary-hover transition-colors">View All</a>
         </div>
         <div class="overflow-x-auto">
             <table class="w-full text-left border-collapse">

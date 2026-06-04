@@ -332,5 +332,6 @@
         }
     </script>
 
+    <?= $this->include('components/chatbot') ?>
 </body>
 </html>

@@ -91,7 +91,7 @@
 
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
-            <div x-show="showModal" x-transition.scale.origin.bottom class="inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-2xl shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <div x-show="showModal" x-transition.scale.origin.bottom class="relative z-10 inline-block px-4 pt-5 pb-4 overflow-hidden text-left align-bottom transition-all transform bg-white rounded-2xl shadow-xl sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
                 <div class="flex justify-between items-center mb-5 pb-4 border-b border-slate-100">
                     <h3 class="text-xl font-serif font-bold text-slate-800" x-text="modalMode === 'create' ? 'Add New Staff' : 'Edit Staff'"></h3>
                     <button @click="closeModal()" class="text-slate-400 hover:text-slate-500 focus:outline-none transition-colors">
@@ -234,9 +234,9 @@ function staffManager() {
                 }
             }
             
-            let url = '<?= base_url('admin/staff/create') ?>';
+            let url = '<?= base_url('ui/admin/staff/create') ?>';
             if (this.modalMode === 'edit') {
-                url = `<?= base_url('admin/staff/update') ?>/${this.currentStaffId}`;
+                url = `<?= base_url('ui/admin/staff/update') ?>/${this.currentStaffId}`;
             }
             
             try {
@@ -261,7 +261,7 @@ function staffManager() {
             if (!confirm('Are you sure you want to deactivate this staff member?')) return;
             
             try {
-                const response = await fetch(`<?= base_url('admin/staff/delete') ?>/${id}`, {
+                const response = await fetch(`<?= base_url('ui/admin/staff/delete') ?>/${id}`, {
                     method: 'POST'
                 });
                 
