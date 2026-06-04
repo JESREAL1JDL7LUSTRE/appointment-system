@@ -57,10 +57,13 @@ $routes->get('/logout', 'Home::logout');
 $routes->post('/logout', 'Home::logout');
 
 $routes->group('ui', function ($routes) {
-    $routes->get('admin', 'UiPreview::adminDashboard');
-    $routes->get('admin/staff', 'UiPreview::adminStaff');
-    $routes->get('admin/services', 'UiPreview::adminServices');
-    $routes->get('admin/appointments', 'UiPreview::adminAppointments');
+    $routes->get('admin', 'Admin::dashboard');
+    $routes->get('admin/staff', 'UiPreview::adminStaff'); // Pending phase 2
+    $routes->get('admin/services', 'Admin::services');
+    $routes->post('admin/services/create', 'Admin::createService');
+    $routes->post('admin/services/update/(:num)', 'Admin::updateService/$1');
+    $routes->post('admin/services/delete/(:num)', 'Admin::deleteService/$1');
+    $routes->get('admin/appointments', 'Admin::appointments');
     
     $routes->get('staff', 'UiPreview::staffDashboard');
     $routes->get('staff/schedule', 'UiPreview::staffSchedule');
