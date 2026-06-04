@@ -20,4 +20,20 @@ class AppointmentModel extends Model
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
     protected $deletedField  = '';
+
+    /**
+     * Checks if a staff member already has a pending/confirmed appointment 
+     * that overlaps with the specified time slot.
+     */
+    public function hasConflict($staffId, $date, $startTime, $endTime): bool
+    {
+        $conflict = $this->where('staff_id', $staffId)
+                         ->where('appointment_date', $date)
+                         ->where('start_time <', $endTime)
+                         ->where('end_time >', $startTime)
+                         ->whereIn('status', ['pending', 'confirmed'])
+                         ->first();
+
+        return $conflict !== null;
+    }
 }
