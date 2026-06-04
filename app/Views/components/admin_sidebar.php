@@ -40,13 +40,19 @@
 
     <!-- User Profile Area -->
     <div class="p-6 border-t border-primary-hover/50 bg-primary">
-        <div class="flex items-center">
-            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-serif font-bold text-sm shadow-md">
-                AD
-            </div>
+        <div class="flex items-center group cursor-pointer" @click="$dispatch('open-profile-modal')">
+            <?php if(session()->get('profile_picture')): ?>
+                <img src="<?= session()->get('profile_picture') ?>" alt="Profile" class="w-10 h-10 rounded-full shadow-md object-cover group-hover:ring-2 ring-accent transition">
+            <?php else: ?>
+                <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-serif font-bold text-sm shadow-md group-hover:bg-accent/90 transition">
+                    <?= substr(session()->get('first_name') ?? 'A', 0, 1) . substr(session()->get('last_name') ?? 'D', 0, 1) ?>
+                </div>
+            <?php endif; ?>
             <div class="ml-3">
-                <p class="text-sm font-serif font-medium text-white">Admin User</p>
-                <a href="#" class="text-xs text-stone-400 hover:text-accent transition-colors">Sign out</a>
+                <p class="text-sm font-serif font-medium text-white group-hover:text-accent transition">
+                    <?= session()->get('first_name') ?? 'Admin' ?> <?= session()->get('last_name') ?? 'User' ?>
+                </p>
+                <a href="<?= base_url('logout') ?>" class="text-xs text-stone-400 hover:text-accent transition-colors" @click.stop>Sign out</a>
             </div>
         </div>
     </div>

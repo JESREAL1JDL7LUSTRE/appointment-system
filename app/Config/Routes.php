@@ -76,5 +76,6 @@ $routes->group('client', function ($routes) {
     $routes->post('slots', 'Home::getAvailableSlots');
     $routes->post('book', 'Home::bookAppointment');
     $routes->post('cancel/(:num)', 'Home::cancelAppointment/$1');
-    $routes->post('profile/update', 'Home::updateProfile');
 });
+$routes->post('quick-login', 'Home::quickLoginUser');
+$routes->post('update-profile', 'Home::updateProfile');
