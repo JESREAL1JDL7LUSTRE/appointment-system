@@ -1,4 +1,4 @@
 /vendor
-env
-/writable
-/writable
+.env
+/writable/
+/node_modules/
