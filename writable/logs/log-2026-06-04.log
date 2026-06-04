@@ -338,3 +338,259 @@ VALUES (\'System administrator with full access\',\'Administrator\'), (\'Service
 13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
 14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-04 06:13:55 --> Duplicate entry '3-2' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (3,\'4\'), (2,\'5\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (2,\'30\'), (2,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (3,\'32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (3,\'4\'), (2,\'5\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (2,\'30\'), (2,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (3,\'32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (3,\'4\'), (2,\'5\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (2,\'30\'), (2,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (3,\'32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1839): CodeIgniter\Database\BaseConnection->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (3,\'4\'), (2,\'5\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (2,\'30\'), (2,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (3,\'32\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2228): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\ServiceSeeder.php(65): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 APPPATH\Database\Seeds\MainSeeder.php(12): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\MainSeeder->run()
+10 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\MainSeeder')
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-04 06:13:56 --> Duplicate entry '3-2' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (3,\'4\'), (1,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (2,\'28\'), (1,\'29\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (1,\'32\'), (2,\'32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (3,\'4\'), (1,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (2,\'28\'), (1,\'29\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (1,\'32\'), (2,\'32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (3,\'4\'), (1,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (2,\'28\'), (1,\'29\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (1,\'32\'), (2,\'32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1839): CodeIgniter\Database\BaseConnection->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'3\'), (3,\'3\'), (1,\'4\'), (3,\'4\'), (1,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (2,\'28\'), (1,\'29\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (1,\'32\'), (2,\'32\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2228): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\ServiceSeeder.php(65): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-04 06:14:17 --> Duplicate entry '3-1' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (3,\'3\'), (3,\'4\'), (2,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (1,\'54\'), (2,\'54\'), (3,\'54\'), (1,\'55\'), (2,\'55\'), (3,\'55\'), (2,\'56\'), (3,\'56\'), (1,\'57\'), (3,\'57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (3,\'3\'), (3,\'4\'), (2,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (1,\'54\'), (2,\'54\'), (3,\'54\'), (1,\'55\'), (2,\'55\'), (3,\'55\'), (2,\'56\'), (3,\'56\'), (1,\'57\'), (3,\'57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (3,\'3\'), (3,\'4\'), (2,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (1,\'54\'), (2,\'54\'), (3,\'54\'), (1,\'55\'), (2,\'55\'), (3,\'55\'), (2,\'56\'), (3,\'56\'), (1,\'57\'), (3,\'57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1839): CodeIgniter\Database\BaseConnection->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (3,\'3\'), (3,\'4\'), (2,\'5\'), (3,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (3,\'7\'), (3,\'28\'), (1,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (2,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (1,\'54\'), (2,\'54\'), (3,\'54\'), (1,\'55\'), (2,\'55\'), (3,\'55\'), (2,\'56\'), (3,\'56\'), (1,\'57\'), (3,\'57\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2228): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\ServiceSeeder.php(65): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 APPPATH\Database\Seeds\MainSeeder.php(12): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\MainSeeder->run()
+10 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\MainSeeder')
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-04 06:14:17 --> Duplicate entry '3-1' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (2,\'3\'), (3,\'3\'), (2,\'4\'), (1,\'5\'), (2,\'5\'), (3,\'5\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (1,\'28\'), (2,\'28\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (2,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (3,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (2,\'54\'), (1,\'55\'), (2,\'55\'), (1,\'56\'), (2,\'56\'), (3,\'56\'), (1,\'57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (2,\'3\'), (3,\'3\'), (2,\'4\'), (1,\'5\'), (2,\'5\'), (3,\'5\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (1,\'28\'), (2,\'28\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (2,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (3,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (2,\'54\'), (1,\'55\'), (2,\'55\'), (1,\'56\'), (2,\'56\'), (3,\'56\'), (1,\'57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (2,\'3\'), (3,\'3\'), (2,\'4\'), (1,\'5\'), (2,\'5\'), (3,\'5\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (1,\'28\'), (2,\'28\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (2,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (3,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (2,\'54\'), (1,\'55\'), (2,\'55\'), (1,\'56\'), (2,\'56\'), (3,\'56\'), (1,\'57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1839): CodeIgniter\Database\BaseConnection->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (1,\'3\'), (2,\'3\'), (3,\'3\'), (2,\'4\'), (1,\'5\'), (2,\'5\'), (3,\'5\'), (2,\'6\'), (3,\'6\'), (1,\'7\'), (2,\'7\'), (3,\'7\'), (1,\'28\'), (2,\'28\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (2,\'30\'), (1,\'31\'), (3,\'31\'), (1,\'32\'), (3,\'32\'), (1,\'53\'), (2,\'53\'), (3,\'53\'), (2,\'54\'), (1,\'55\'), (2,\'55\'), (1,\'56\'), (2,\'56\'), (3,\'56\'), (1,\'57\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2228): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\ServiceSeeder.php(65): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+10 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+11 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+12 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+13 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+ERROR - 2026-06-04 06:16:51 --> Duplicate entry '2-2' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'2\'), (1,\'3\'), (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (1,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'27\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (2,\'31\'), (3,\'31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'2\'), (1,\'3\'), (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (1,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'27\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (2,\'31\'), (3,\'31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'2\'), (1,\'3\'), (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (1,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'27\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (2,\'31\'), (3,\'31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1839): CodeIgniter\Database\BaseConnection->query('INSERT INTO `staff_services` (`service_id`, `staff_id`)
+VALUES (2,\'2\'), (1,\'3\'), (2,\'3\'), (3,\'3\'), (1,\'4\'), (2,\'4\'), (1,\'5\'), (1,\'6\'), (2,\'6\'), (3,\'6\'), (1,\'27\'), (3,\'28\'), (2,\'29\'), (3,\'29\'), (1,\'30\'), (1,\'31\'), (2,\'31\'), (3,\'31\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2228): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 APPPATH\Database\Seeds\ServiceSeeder.php(65): CodeIgniter\Database\BaseBuilder->insertBatch([...])
+ 7 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\ServiceSeeder->run()
+ 8 APPPATH\Database\Seeds\MainSeeder.php(12): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\ServiceSeeder')
+ 9 SYSTEMPATH\Database\Seeder.php(155): App\Database\Seeds\MainSeeder->run()
+10 SYSTEMPATH\Commands\Database\Seed.php(79): CodeIgniter\Database\Seeder->call('App\\Database\\Seeds\\MainSeeder')
+11 SYSTEMPATH\CLI\Commands.php(72): CodeIgniter\Commands\Database\Seed->run([])
+12 SYSTEMPATH\CLI\Console.php(47): CodeIgniter\CLI\Commands->run('db:seed', [...])
+13 SYSTEMPATH\Boot.php(442): CodeIgniter\CLI\Console->run()
+14 SYSTEMPATH\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+15 ROOTPATH\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+DEBUG - 2026-06-04 06:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:31:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:31:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2026-06-04 07:06:32 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:35 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:38 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:38 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:39 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:44 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:53 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:06:53 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:09:16 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+CRITICAL - 2026-06-04 07:09:18 --> Error: Class "Groq\Client" not found
+[Method: POST, Route: chatbot/ask]
+in APPPATH\Services\ChatbotService.php on line 19.
+ 1 APPPATH\Controllers\ChatbotController.php(19): App\Services\ChatbotService->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ChatbotController->ask()
+ 3 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ChatbotController))
+ 4 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\appointment-system\\public\\index.php')
+ERROR - 2026-06-04 07:11:25 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:27 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:28 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:30 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:32 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:33 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:34 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:36 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:37 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:39 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:11:40 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+ERROR - 2026-06-04 07:12:05 --> ChatbotController: The model `llama3-8b-8192` has been decommissioned and is no longer supported. Please refer to https://console.groq.com/docs/deprecations for a recommendation on which model to use instead.
+DEBUG - 2026-06-04 07:13:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:14:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:16:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 07:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

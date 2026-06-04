@@ -25,6 +25,10 @@
         </main>
     </div>
 
+    <!-- Floating Chatbot Widget -->
+    <?= $this->include('components/chatbot') ?>
+
+
     <!-- Mobile Sidebar Backdrop -->
     <div id="sidebarBackdrop" class="fixed inset-0 bg-slate-900/50 z-10 hidden md:hidden"></div>
 
