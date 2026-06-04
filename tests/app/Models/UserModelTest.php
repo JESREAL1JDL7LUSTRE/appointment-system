@@ -16,6 +16,7 @@ class UserModelTest extends CIUnitTestCase
     protected $refresh     = true;
 
     protected $seed = 'App\Database\Seeds\UserSeeder';
+    protected $namespace = 'App';
 
     public function testUserCreation()
     {
