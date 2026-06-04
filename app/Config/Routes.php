@@ -49,8 +49,8 @@ $routes->group('api', ['namespace' => 'App\Controllers\API'], static function ($
 // --------------------------------------------------------------------
 // UI Preview Routes
 // --------------------------------------------------------------------
-$routes->get('/dashboard', 'Client::dashboard');
-$routes->get('/client/appointments', 'Client::appointments');
+$routes->get('/dashboard', 'Client::dashboard', ['filter' => 'role:Client']);
+$routes->get('/client/appointments', 'Client::appointments', ['filter' => 'role:Client']);
 
 $routes->get('/login', 'Home::login');
 $routes->post('/login', 'Home::doLogin');
@@ -59,26 +59,30 @@ $routes->get('/logout', 'Home::logout');
 $routes->post('/logout', 'Home::logout');
 
 $routes->group('ui', function ($routes) {
-    $routes->get('admin', 'Admin::dashboard');
-    $routes->get('admin/staff', 'Admin::staff');
-    $routes->post('admin/staff/create', 'Admin::createStaff');
-    $routes->post('admin/staff/update/(:num)', 'Admin::updateStaff/$1');
-    $routes->post('admin/staff/delete/(:num)', 'Admin::deleteStaff/$1');
-    $routes->get('admin/services', 'Admin::services');
-    $routes->post('admin/services/create', 'Admin::createService');
-    $routes->post('admin/services/update/(:num)', 'Admin::updateService/$1');
-    $routes->post('admin/services/delete/(:num)', 'Admin::deleteService/$1');
-    $routes->get('admin/appointments', 'Admin::appointments');
+    $routes->group('admin', ['filter' => 'role:Administrator'], function ($routes) {
+        $routes->get('', 'Admin::dashboard');
+        $routes->get('staff', 'Admin::staff');
+        $routes->post('staff/create', 'Admin::createStaff');
+        $routes->post('staff/update/(:num)', 'Admin::updateStaff/$1');
+        $routes->post('staff/delete/(:num)', 'Admin::deleteStaff/$1');
+        $routes->get('services', 'Admin::services');
+        $routes->post('services/create', 'Admin::createService');
+        $routes->post('services/update/(:num)', 'Admin::updateService/$1');
+        $routes->post('services/delete/(:num)', 'Admin::deleteService/$1');
+        $routes->get('appointments', 'Admin::appointments');
+    });
     
-    $routes->get('staff', 'Staff::dashboard');
-    $routes->get('staff/schedule', 'Staff::schedule');
-    $routes->get('staff/appointments', 'Staff::appointments');
-    $routes->post('staff/appointments/update-status/(:num)', 'Staff::updateAppointmentStatus/$1');
+    $routes->group('staff', ['filter' => 'role:Staff,Administrator'], function ($routes) {
+        $routes->get('', 'Staff::dashboard');
+        $routes->get('schedule', 'Staff::schedule');
+        $routes->get('appointments', 'Staff::appointments');
+        $routes->post('appointments/update-status/(:num)', 'Staff::updateAppointmentStatus/$1');
+    });
 });
 $routes->post('chatbot/ask', 'ChatbotController::ask');
 
 // Client Portal Operations
-$routes->group('client', function ($routes) {
+$routes->group('client', ['filter' => 'role:Client'], function ($routes) {
     $routes->post('switch', 'Home::switchClient');
     $routes->post('register', 'Home::registerClient');
     $routes->get('staff-by-service/(:num)', 'Home::getStaffForService/$1');
