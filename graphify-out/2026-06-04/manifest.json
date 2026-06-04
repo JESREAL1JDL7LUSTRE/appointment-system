@@ -95,9 +95,9 @@
     "semantic_hash": "a24ec24c433e9ad960f6ade1eb81d8f9"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Config\\Filters.php": {
-    "mtime": 1780553993.117298,
-    "ast_hash": "fbd1526a3a4f5e323e92218c69059c78",
-    "semantic_hash": "fbd1526a3a4f5e323e92218c69059c78"
+    "mtime": 1780563202.915012,
+    "ast_hash": "1079d9e3e651fbb6db9dc5150942fd6a",
+    "semantic_hash": "1079d9e3e651fbb6db9dc5150942fd6a"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Config\\ForeignCharacters.php": {
     "mtime": 1780485671.4910996,
@@ -175,9 +175,9 @@
     "semantic_hash": "0b25baa53094bf0a73573a7a568e505c"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Config\\Routes.php": {
-    "mtime": 1780560728.3241284,
-    "ast_hash": "adf885c43b5c77e409b342daff6baba7",
-    "semantic_hash": "adf885c43b5c77e409b342daff6baba7"
+    "mtime": 1780569135.511594,
+    "ast_hash": "b1b07760a7c7c7f42dbce72e4b340b57",
+    "semantic_hash": "b1b07760a7c7c7f42dbce72e4b340b57"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Config\\Routing.php": {
     "mtime": 1780485673.030382,
@@ -270,14 +270,14 @@
     "semantic_hash": "69070ae19afff882e0c5e8a461688cfb"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Controllers\\Home.php": {
-    "mtime": 1780560728.3329997,
-    "ast_hash": "1084b88f8a12b87ba12f6c48dbd7a923",
-    "semantic_hash": "1084b88f8a12b87ba12f6c48dbd7a923"
+    "mtime": 1780569094.121183,
+    "ast_hash": "efc9a9c6fa0f3054c23827f39a58219f",
+    "semantic_hash": "efc9a9c6fa0f3054c23827f39a58219f"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Controllers\\UiPreview.php": {
-    "mtime": 1780560728.3349984,
-    "ast_hash": "7f5042f935c89566d073e1fa3a726b21",
-    "semantic_hash": "7f5042f935c89566d073e1fa3a726b21"
+    "mtime": 1780562435.7720673,
+    "ast_hash": "bb66dce90988d6de3371492d9c0a2c68",
+    "semantic_hash": "bb66dce90988d6de3371492d9c0a2c68"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Database\\Migrations\\2026-06-04-000001_CreateUsersTable.php": {
     "mtime": 1780560728.3349984,
@@ -360,9 +360,9 @@
     "semantic_hash": "df1a9b96f422111e22b0ee64f83217ad"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Database\\Seeds\\ServiceSeeder.php": {
-    "mtime": 1780560728.3481152,
-    "ast_hash": "082475f5e95f1c43bbc3efedcbf87ea0",
-    "semantic_hash": "082475f5e95f1c43bbc3efedcbf87ea0"
+    "mtime": 1780568836.917618,
+    "ast_hash": "892d8e8af14aef9e88bfd424c4c8bcc5",
+    "semantic_hash": "892d8e8af14aef9e88bfd424c4c8bcc5"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Database\\Seeds\\UserSeeder.php": {
     "mtime": 1780560728.3485122,
@@ -370,9 +370,9 @@
     "semantic_hash": "a0a864d51607c9a122172c1776c8fa23"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Filters\\RoleFilter.php": {
-    "mtime": 1780560728.3495214,
-    "ast_hash": "d4ba0760702a623af3b9f97dae4207c4",
-    "semantic_hash": "d4ba0760702a623af3b9f97dae4207c4"
+    "mtime": 1780563090.6459217,
+    "ast_hash": "a63de68209960193f42c0678a85fe8bc",
+    "semantic_hash": "a63de68209960193f42c0678a85fe8bc"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Language\\en\\Validation.php": {
     "mtime": 1780485674.6026542,
@@ -510,14 +510,14 @@
     "semantic_hash": "9401dd3ecacdb27cabb09d9c4ba5a137"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\auth\\login.php": {
-    "mtime": 1780560728.38444,
-    "ast_hash": "c71a2f6d3abd234bc5f1309412bce16f",
-    "semantic_hash": "c71a2f6d3abd234bc5f1309412bce16f"
+    "mtime": 1780569948.8746133,
+    "ast_hash": "1bbf1506c167b78219a030c03c20def8",
+    "semantic_hash": "1bbf1506c167b78219a030c03c20def8"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\client\\dashboard.php": {
-    "mtime": 1780560728.3864481,
-    "ast_hash": "2f8a5b125125aed4739df3ef5f203024",
-    "semantic_hash": "2f8a5b125125aed4739df3ef5f203024"
+    "mtime": 1780569957.9337454,
+    "ast_hash": "acda584d761a7064094774125aeab392",
+    "semantic_hash": "acda584d761a7064094774125aeab392"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\components\\admin_header.php": {
     "mtime": 1780560728.387648,
@@ -525,14 +525,19 @@
     "semantic_hash": "e790d4cc718779ffbc14e0e11b277199"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\components\\admin_sidebar.php": {
-    "mtime": 1780560728.387648,
-    "ast_hash": "038f7b9657350a1490d7655e8a592377",
-    "semantic_hash": "038f7b9657350a1490d7655e8a592377"
+    "mtime": 1780569988.3865807,
+    "ast_hash": "795e68cf849deda4ce3542f5d274f573",
+    "semantic_hash": "795e68cf849deda4ce3542f5d274f573"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\components\\chatbot.php": {
     "mtime": 1780560728.3886487,
     "ast_hash": "4340819108c9ce8b4b1cc16c1c1474ec",
     "semantic_hash": "4340819108c9ce8b4b1cc16c1c1474ec"
+  },
+  "E:\\OJT\\brox\\appointment-system\\app\\Views\\components\\profile_modal.php": {
+    "mtime": 1780567939.5024734,
+    "ast_hash": "6292ae5376c6e3b18ba23c14614445a0",
+    "semantic_hash": "6292ae5376c6e3b18ba23c14614445a0"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\components\\staff_header.php": {
     "mtime": 1780560728.3896482,
@@ -540,9 +545,9 @@
     "semantic_hash": "b2fd9ab750633d6ab4182a0252fcb588"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\components\\staff_sidebar.php": {
-    "mtime": 1780560728.3896482,
-    "ast_hash": "eedf799e20af9f2259e241b45082d434",
-    "semantic_hash": "eedf799e20af9f2259e241b45082d434"
+    "mtime": 1780569995.8338432,
+    "ast_hash": "3940ce56af156217b301fd555b760332",
+    "semantic_hash": "3940ce56af156217b301fd555b760332"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\errors\\cli\\error_404.php": {
     "mtime": 1780485674.9615235,
@@ -585,19 +590,19 @@
     "semantic_hash": "42f3b3c0d611e89537ccec9c4e034718"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\landing.php": {
-    "mtime": 1780560728.3906481,
-    "ast_hash": "f317a2fd252e103bceec5df6ea39907d",
-    "semantic_hash": "f317a2fd252e103bceec5df6ea39907d"
+    "mtime": 1780569938.062704,
+    "ast_hash": "daedebac6921d038b6a69fdf2a250818",
+    "semantic_hash": "daedebac6921d038b6a69fdf2a250818"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\layouts\\admin.php": {
-    "mtime": 1780560728.391648,
-    "ast_hash": "39c17109bb5df873f4741ad673f883b9",
-    "semantic_hash": "39c17109bb5df873f4741ad673f883b9"
+    "mtime": 1780567966.5171492,
+    "ast_hash": "9241558a43a5a61acb762505c6b718de",
+    "semantic_hash": "9241558a43a5a61acb762505c6b718de"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\layouts\\staff.php": {
-    "mtime": 1780560728.3926497,
-    "ast_hash": "c9aed8d9b4e8eb5508728a170d6f282f",
-    "semantic_hash": "c9aed8d9b4e8eb5508728a170d6f282f"
+    "mtime": 1780567977.1208737,
+    "ast_hash": "cddbfa1e30bde0f84eab4588eaccea59",
+    "semantic_hash": "cddbfa1e30bde0f84eab4588eaccea59"
   },
   "E:\\OJT\\brox\\appointment-system\\app\\Views\\staff\\appointments.php": {
     "mtime": 1780560728.3932269,
@@ -3803,6 +3808,11 @@
     "mtime": 1780485677.690067,
     "ast_hash": "60dad6a5646534822059e1020f9c66d7",
     "semantic_hash": "60dad6a5646534822059e1020f9c66d7"
+  },
+  "E:\\OJT\\brox\\appointment-system\\temp_error.json": {
+    "mtime": 1780563174.5349987,
+    "ast_hash": "c17ca52412eed0519541e27fbf3eea18",
+    "semantic_hash": "c17ca52412eed0519541e27fbf3eea18"
   },
   "E:\\OJT\\brox\\appointment-system\\tests\\_support\\Database\\Migrations\\2020-02-22-222222_example_migration.php": {
     "mtime": 1780485735.864233,
