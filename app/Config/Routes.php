@@ -18,6 +18,11 @@ $routes->group('api', ['namespace' => 'App\Controllers\API'], static function ($
     // Public / Shared availability
     $routes->get('schedule/slots', 'ScheduleController::slots');
 
+    // Authenticated User Endpoints (Any logged-in user)
+    $routes->group('user', ['filter' => 'role'], static function ($routes) {
+        $routes->post('avatar', 'UserController::uploadAvatar');
+    });
+
     // Client Endpoints (Must be logged in as Client)
     $routes->group('client', ['filter' => 'role:Client'], static function ($routes) {
         $routes->post('appointments', 'AppointmentController::create');
