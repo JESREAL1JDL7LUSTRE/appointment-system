@@ -21,8 +21,9 @@ class Client extends BaseController
         
         // Fetch all appointments for the client
         $appointmentsRaw = $appointmentModel
-            ->select('appointments.*, s.first_name as staff_first, s.last_name as staff_last, serv.name as service_name, serv.duration_minutes')
+            ->select('appointments.*, s.first_name as staff_first_name, s.last_name as staff_last_name, sp.title as staff_title, serv.name as service_name, serv.duration_minutes, serv.price')
             ->join('users s', 's.id = appointments.staff_id', 'left')
+            ->join('staff_profiles sp', 'sp.user_id = s.id', 'left')
             ->join('services serv', 'serv.id = appointments.service_id', 'left')
             ->where('appointments.client_id', $clientId)
             ->orderBy('appointments.appointment_date', 'DESC')
@@ -33,13 +34,17 @@ class Client extends BaseController
         foreach ($appointmentsRaw as $apt) {
             $clientAppointments[] = [
                 'id' => $apt['id'],
-                'staff_name' => trim(($apt['staff_first'] ?? '') . ' ' . ($apt['staff_last'] ?? '')),
+                'staff_first_name' => $apt['staff_first_name'] ?? 'Unknown',
+                'staff_last_name' => $apt['staff_last_name'] ?? '',
+                'staff_title' => $apt['staff_title'] ?? 'Staff',
                 'service_name' => $apt['service_name'] ?? 'Unknown',
+                'price' => $apt['price'] ?? 0.00,
+                'duration_minutes' => $apt['duration_minutes'] ?? 0,
                 'appointment_date' => $apt['appointment_date'],
                 'start_time' => $apt['start_time'],
                 'end_time' => $apt['end_time'],
-                'duration' => $apt['duration_minutes'],
-                'status' => $apt['status']
+                'status' => $apt['status'],
+                'client_notes' => $apt['client_notes']
             ];
         }
 
