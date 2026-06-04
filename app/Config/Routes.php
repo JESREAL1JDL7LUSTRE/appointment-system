@@ -23,6 +23,7 @@ $routes->group('ui', function ($routes) {
     $routes->get('staff/schedule', 'UiPreview::staffSchedule');
     $routes->get('staff/appointments', 'UiPreview::staffAppointments');
 });
+$routes->post('chatbot/ask', 'ChatbotController::ask');
 
 // Client Portal Operations
 $routes->group('client', function ($routes) {
