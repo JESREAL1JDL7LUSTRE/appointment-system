@@ -1,233 +1,236 @@
-# Graph Report - E:\OJT\brox\appointment-system  (2026-06-04)
+# Graph Report - .  (2026-06-04)
 
 ## Corpus Check
 - cluster-only mode — file stats not available
 
 ## Summary
-- 5903 nodes · 9774 edges · 486 communities (273 shown, 213 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 614 edges (avg confidence: 0.8)
+- 6122 nodes · 10028 edges · 509 communities (303 shown, 206 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 628 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `59b95f26`
+- Built from commit: `b74012f3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- [[_COMMUNITY_Routing and Cookies|Routing and Cookies]]
-- [[_COMMUNITY_HTTP Message Headers|HTTP Message Headers]]
-- [[_COMMUNITY_Format Validation Rules|Format Validation Rules]]
-- [[_COMMUNITY_Debug Configuration|Debug Configuration]]
-- [[_COMMUNITY_Route Collection Management|Route Collection Management]]
-- [[_COMMUNITY_API Exception Handling|API Exception Handling]]
-- [[_COMMUNITY_Base Model Operations|Base Model Operations]]
-- [[_COMMUNITY_Service Container Accessors|Service Container Accessors]]
-- [[_COMMUNITY_URI Parsing and Manipulation|URI Parsing and Manipulation]]
-- [[_COMMUNITY_Query Builder Core|Query Builder Core]]
+- [[_COMMUNITY_HTTP Message Handling|HTTP Message Handling]]
+- [[_COMMUNITY_Cookie Security Validation|Cookie Security Validation]]
 - [[_COMMUNITY_Framework Bootstrapping|Framework Bootstrapping]]
+- [[_COMMUNITY_Abstract Data Representations|Abstract Data Representations]]
+- [[_COMMUNITY_Cookie and HTTPS Management|Cookie and HTTPS Management]]
 - [[_COMMUNITY_CLI Cache Commands|CLI Cache Commands]]
-- [[_COMMUNITY_Security and CSRF|Security and CSRF]]
-- [[_COMMUNITY_Redis Cache Handler|Redis Cache Handler]]
-- [[_COMMUNITY_App Console Runner|App Console Runner]]
-- [[_COMMUNITY_Autoload and Exceptions|Autoload and Exceptions]]
-- [[_COMMUNITY_Code Generation Utilities|Code Generation Utilities]]
-- [[_COMMUNITY_Request Router|Request Router]]
-- [[_COMMUNITY_Helper and Number Utilities|Helper and Number Utilities]]
-- [[_COMMUNITY_Frontend UI Logic|Frontend UI Logic]]
-- [[_COMMUNITY_Prepared Query Execution|Prepared Query Execution]]
-- [[_COMMUNITY_Database Forge Schema|Database Forge Schema]]
-- [[_COMMUNITY_Abstract Rendering Engine|Abstract Rendering Engine]]
-- [[_COMMUNITY_File System Collection|File System Collection]]
-- [[_COMMUNITY_CLI Input Output|CLI Input Output]]
-- [[_COMMUNITY_CURL HTTP Client|CURL HTTP Client]]
-- [[_COMMUNITY_Database Connection Base|Database Connection Base]]
-- [[_COMMUNITY_File and Path Plugins|File and Path Plugins]]
-- [[_COMMUNITY_Session Management|Session Management]]
-- [[_COMMUNITY_HTTP Response Testing|HTTP Response Testing]]
-- [[_COMMUNITY_App Environment Config|App Environment Config]]
-- [[_COMMUNITY_Cookie Attribute Management|Cookie Attribute Management]]
-- [[_COMMUNITY_Exception Handler Logic|Exception Handler Logic]]
-- [[_COMMUNITY_Response Cookie Trait|Response Cookie Trait]]
-- [[_COMMUNITY_Value Parsing Plugins|Value Parsing Plugins]]
-- [[_COMMUNITY_Color and Binary Plugins|Color and Binary Plugins]]
-- [[_COMMUNITY_Image Manipulation|Image Manipulation]]
-- [[_COMMUNITY_HTML Form Helpers|HTML Form Helpers]]
-- [[_COMMUNITY_Incoming Request Data|Incoming Request Data]]
-- [[_COMMUNITY_Database Model Methods|Database Model Methods]]
-- [[_COMMUNITY_CLI Signal Handling|CLI Signal Handling]]
-- [[_COMMUNITY_File Cache Handler|File Cache Handler]]
-- [[_COMMUNITY_DOM Parsing Plugins|DOM Parsing Plugins]]
+- [[_COMMUNITY_Service Factory Methods|Service Factory Methods]]
+- [[_COMMUNITY_Time and Date Utilities|Time and Date Utilities]]
+- [[_COMMUNITY_Base Model Functionality|Base Model Functionality]]
+- [[_COMMUNITY_SQL Query Builder|SQL Query Builder]]
+- [[_COMMUNITY_Route Collection Management|Route Collection Management]]
+- [[_COMMUNITY_Exception Interfaces|Exception Interfaces]]
+- [[_COMMUNITY_File and Class Generation|File and Class Generation]]
+- [[_COMMUNITY_URI Parsing and Manipulation|URI Parsing and Manipulation]]
+- [[_COMMUNITY_Application Configuration|Application Configuration]]
+- [[_COMMUNITY_Autoloading and Booting|Autoloading and Booting]]
 - [[_COMMUNITY_Content Security Policy|Content Security Policy]]
-- [[_COMMUNITY_Database Connection Driver|Database Connection Driver]]
-- [[_COMMUNITY_Framework Entry Points|Framework Entry Points]]
-- [[_COMMUNITY_Route Collection Interface|Route Collection Interface]]
-- [[_COMMUNITY_Superglobal Variable Access|Superglobal Variable Access]]
-- [[_COMMUNITY_URL and Link Helpers|URL and Link Helpers]]
-- [[_COMMUNITY_Database Result Sets|Database Result Sets]]
-- [[_COMMUNITY_HTML and Media Helpers|HTML and Media Helpers]]
-- [[_COMMUNITY_Email Composition|Email Composition]]
-- [[_COMMUNITY_Plugin Rendering System|Plugin Rendering System]]
-- [[_COMMUNITY_Context and Base Plugins|Context and Base Plugins]]
-- [[_COMMUNITY_File Download Response|File Download Response]]
-- [[_COMMUNITY_Data Formatting Utilities|Data Formatting Utilities]]
-- [[_COMMUNITY_Cache Management Interface|Cache Management Interface]]
-- [[_COMMUNITY_Database Error Handling|Database Error Handling]]
-- [[_COMMUNITY_Framework Specific Exceptions|Framework Specific Exceptions]]
-- [[_COMMUNITY_File Publisher System|File Publisher System]]
-- [[_COMMUNITY_Time Manipulation Trait|Time Manipulation Trait]]
-- [[_COMMUNITY_Database Connection Logic|Database Connection Logic]]
-- [[_COMMUNITY_Database Debug Toolbar|Database Debug Toolbar]]
+- [[_COMMUNITY_CLI InputOutput|CLI Input/Output]]
 - [[_COMMUNITY_Request Filter Management|Request Filter Management]]
-- [[_COMMUNITY_Encryption and Keys|Encryption and Keys]]
-- [[_COMMUNITY_Entity Data Mapping|Entity Data Mapping]]
-- [[_COMMUNITY_HTTP Error Exceptions|HTTP Error Exceptions]]
-- [[_COMMUNITY_Pagination Rendering|Pagination Rendering]]
-- [[_COMMUNITY_JSON and Table Plugins|JSON and Table Plugins]]
+- [[_COMMUNITY_Route Collection Interface|Route Collection Interface]]
+- [[_COMMUNITY_Console and Request Config|Console and Request Config]]
+- [[_COMMUNITY_Frontend Folder Logic|Frontend Folder Logic]]
+- [[_COMMUNITY_Database Forge Schema|Database Forge Schema]]
+- [[_COMMUNITY_Database Migration Runner|Database Migration Runner]]
+- [[_COMMUNITY_Email Composition and Sending|Email Composition and Sending]]
+- [[_COMMUNITY_Value Parsing Plugins|Value Parsing Plugins]]
+- [[_COMMUNITY_Abstract Content Rendering|Abstract Content Rendering]]
+- [[_COMMUNITY_Cookie Attribute Management|Cookie Attribute Management]]
+- [[_COMMUNITY_Redis Cache Handler|Redis Cache Handler]]
+- [[_COMMUNITY_HTTP Response Trait|HTTP Response Trait]]
+- [[_COMMUNITY_Number and Text Helpers|Number and Text Helpers]]
+- [[_COMMUNITY_Factory Instance Caching|Factory Instance Caching]]
+- [[_COMMUNITY_CURL HTTP Client|CURL HTTP Client]]
+- [[_COMMUNITY_Session Management|Session Management]]
+- [[_COMMUNITY_Database Model Operations|Database Model Operations]]
+- [[_COMMUNITY_HTTP Response Testing|HTTP Response Testing]]
+- [[_COMMUNITY_DOM Node Parsing|DOM Node Parsing]]
+- [[_COMMUNITY_DateTime Parsing Plugins|DateTime Parsing Plugins]]
+- [[_COMMUNITY_Binary and Color Plugins|Binary and Color Plugins]]
+- [[_COMMUNITY_File Cache Handler|File Cache Handler]]
+- [[_COMMUNITY_Uploaded File Handling|Uploaded File Handling]]
+- [[_COMMUNITY_Image Manipulation|Image Manipulation]]
+- [[_COMMUNITY_Process Signal Handling|Process Signal Handling]]
+- [[_COMMUNITY_Appointment Controller|Appointment Controller]]
+- [[_COMMUNITY_HTML Tag Helpers|HTML Tag Helpers]]
+- [[_COMMUNITY_Form UI Helpers|Form UI Helpers]]
+- [[_COMMUNITY_Database Connection Base|Database Connection Base]]
+- [[_COMMUNITY_Superglobal Variable Access|Superglobal Variable Access]]
+- [[_COMMUNITY_Parser Plugin Base|Parser Plugin Base]]
+- [[_COMMUNITY_URL and Link Helpers|URL and Link Helpers]]
+- [[_COMMUNITY_View Rendering and Paging|View Rendering and Paging]]
+- [[_COMMUNITY_File Publishing Utilities|File Publishing Utilities]]
+- [[_COMMUNITY_Incoming HTTP Request|Incoming HTTP Request]]
+- [[_COMMUNITY_Alpha-Numeric Validation Rules|Alpha-Numeric Validation Rules]]
+- [[_COMMUNITY_Array and Iterator Parsing|Array and Iterator Parsing]]
+- [[_COMMUNITY_Request Routing Engine|Request Routing Engine]]
 - [[_COMMUNITY_Service Locator|Service Locator]]
-- [[_COMMUNITY_Array Helper Functions|Array Helper Functions]]
-- [[_COMMUNITY_Class Reflection Plugins|Class Reflection Plugins]]
-- [[_COMMUNITY_Output Escaping|Output Escaping]]
-- [[_COMMUNITY_HTTP Response Methods|HTTP Response Methods]]
-- [[_COMMUNITY_Site URI Management|Site URI Management]]
-- [[_COMMUNITY_User Agent Detection|User Agent Detection]]
-- [[_COMMUNITY_Date Comparison Logic|Date Comparison Logic]]
-- [[_COMMUNITY_Database Metadata Access|Database Metadata Access]]
-- [[_COMMUNITY_Validation Interface|Validation Interface]]
-- [[_COMMUNITY_Database Mocking|Database Mocking]]
-- [[_COMMUNITY_Session Handler Base|Session Handler Base]]
-- [[_COMMUNITY_PHP Extension Requirements|PHP Extension Requirements]]
-- [[_COMMUNITY_Query Debugging|Query Debugging]]
-- [[_COMMUNITY_CLI Request Handling|CLI Request Handling]]
-- [[_COMMUNITY_General Utility Functions|General Utility Functions]]
-- [[_COMMUNITY_Database Versioning|Database Versioning]]
-- [[_COMMUNITY_Pagination Logic|Pagination Logic]]
-- [[_COMMUNITY_Proxy and Object Plugins|Proxy and Object Plugins]]
-- [[_COMMUNITY_Template Parser Engine|Template Parser Engine]]
-- [[_COMMUNITY_Asset and Plain Rendering|Asset and Plain Rendering]]
-- [[_COMMUNITY_Class Autoloader|Class Autoloader]]
-- [[_COMMUNITY_Strict Validation Rules|Strict Validation Rules]]
-- [[_COMMUNITY_Database Table Schema|Database Table Schema]]
-- [[_COMMUNITY_Feature Testing Trait|Feature Testing Trait]]
-- [[_COMMUNITY_Community 99|Community 99]]
-- [[_COMMUNITY_Component Instance Factory|Component Instance Factory]]
-- [[_COMMUNITY_Subquery Builder|Subquery Builder]]
-- [[_COMMUNITY_Source Code Representation|Source Code Representation]]
-- [[_COMMUNITY_CORS Middleware|CORS Middleware]]
-- [[_COMMUNITY_Date Part Accessors|Date Part Accessors]]
-- [[_COMMUNITY_Query Builder Operations|Query Builder Operations]]
-- [[_COMMUNITY_Unit Testing Helpers|Unit Testing Helpers]]
-- [[_COMMUNITY_Select Query Builder|Select Query Builder]]
-- [[_COMMUNITY_Database Testing Trait|Database Testing Trait]]
-- [[_COMMUNITY_Database Utility Base|Database Utility Base]]
-- [[_COMMUNITY_Renderer and Pager Integration|Renderer and Pager Integration]]
-- [[_COMMUNITY_Connection Interface|Connection Interface]]
-- [[_COMMUNITY_Database Seeding|Database Seeding]]
-- [[_COMMUNITY_Image Processing Exceptions|Image Processing Exceptions]]
-- [[_COMMUNITY_Text Manipulation Helpers|Text Manipulation Helpers]]
-- [[_COMMUNITY_Kint Debugger Integration|Kint Debugger Integration]]
-- [[_COMMUNITY_Mock Cache Handler|Mock Cache Handler]]
-- [[_COMMUNITY_Rich Text Rendering|Rich Text Rendering]]
-- [[_COMMUNITY_Session Data Access|Session Data Access]]
-- [[_COMMUNITY_Representation Interface|Representation Interface]]
-- [[_COMMUNITY_Standard Validation Rules|Standard Validation Rules]]
-- [[_COMMUNITY_Validation Engine|Validation Engine]]
-- [[_COMMUNITY_HTML Table Generator|HTML Table Generator]]
-- [[_COMMUNITY_View Rendering System|View Rendering System]]
-- [[_COMMUNITY_Data Type Casting|Data Type Casting]]
-- [[_COMMUNITY_Database Forge Base|Database Forge Base]]
-- [[_COMMUNITY_Debug Collector Base|Debug Collector Base]]
-- [[_COMMUNITY_Base Controller Logic|Base Controller Logic]]
-- [[_COMMUNITY_Cookie Storage|Cookie Storage]]
-- [[_COMMUNITY_Database Creation Utility|Database Creation Utility]]
-- [[_COMMUNITY_MySQL Session Handler|MySQL Session Handler]]
-- [[_COMMUNITY_HTTP Request Headers|HTTP Request Headers]]
-- [[_COMMUNITY_APCu Cache Handler|APCu Cache Handler]]
-- [[_COMMUNITY_ImageMagick Driver|ImageMagick Driver]]
-- [[_COMMUNITY_Pagination Link Generation|Pagination Link Generation]]
-- [[_COMMUNITY_Logging Interface|Logging Interface]]
-- [[_COMMUNITY_Data Parser|Data Parser]]
-- [[_COMMUNITY_Resource and Stream Plugins|Resource and Stream Plugins]]
-- [[_COMMUNITY_Tabular Data Rendering|Tabular Data Rendering]]
-- [[_COMMUNITY_DOM Assertion Parser|DOM Assertion Parser]]
-- [[_COMMUNITY_Response Caching|Response Caching]]
-- [[_COMMUNITY_View Cell Components|View Cell Components]]
-- [[_COMMUNITY_Model Generation Utility|Model Generation Utility]]
-- [[_COMMUNITY_Microtime Debugging|Microtime Debugging]]
-- [[_COMMUNITY_Array and Trace Values|Array and Trace Values]]
-- [[_COMMUNITY_Parser Limit Plugins|Parser Limit Plugins]]
-- [[_COMMUNITY_Controller URI Mapping|Controller URI Mapping]]
-- [[_COMMUNITY_Mock Query Builder|Mock Query Builder]]
-- [[_COMMUNITY_Service Factory|Service Factory]]
-- [[_COMMUNITY_Debug Toolbar Data|Debug Toolbar Data]]
-- [[_COMMUNITY_Format and JSON Exceptions|Format and JSON Exceptions]]
-- [[_COMMUNITY_Internationalization Exceptions|Internationalization Exceptions]]
-- [[_COMMUNITY_Dummy Cache Handler|Dummy Cache Handler]]
-- [[_COMMUNITY_Content Negotiation|Content Negotiation]]
-- [[_COMMUNITY_Class Method Plugins|Class Method Plugins]]
+- [[_COMMUNITY_Database Result Base|Database Result Base]]
+- [[_COMMUNITY_File Download Response|File Download Response]]
+- [[_COMMUNITY_Mock Data Fabricator|Mock Data Fabricator]]
+- [[_COMMUNITY_Context and Closure Parsing|Context and Closure Parsing]]
+- [[_COMMUNITY_Database Connection Metadata|Database Connection Metadata]]
+- [[_COMMUNITY_Framework System Exceptions|Framework System Exceptions]]
+- [[_COMMUNITY_Class and JSON Plugins|Class and JSON Plugins]]
+- [[_COMMUNITY_MySQL Database Connection|MySQL Database Connection]]
+- [[_COMMUNITY_Rich Content Renderer|Rich Content Renderer]]
+- [[_COMMUNITY_PostgreSQL Database Connection|PostgreSQL Database Connection]]
+- [[_COMMUNITY_Authentication and Staff Controllers|Authentication and Staff Controllers]]
+- [[_COMMUNITY_Debug Toolbar Collection|Debug Toolbar Collection]]
+- [[_COMMUNITY_Response Helper Methods|Response Helper Methods]]
+- [[_COMMUNITY_Encryption and Decryption|Encryption and Decryption]]
+- [[_COMMUNITY_Data Entity Mapping|Data Entity Mapping]]
+- [[_COMMUNITY_HTTP Error Exceptions|HTTP Error Exceptions]]
+- [[_COMMUNITY_File System Plugins|File System Plugins]]
+- [[_COMMUNITY_Pagination Renderer|Pagination Renderer]]
 - [[_COMMUNITY_XML and HTML Plugins|XML and HTML Plugins]]
 - [[_COMMUNITY_SimpleXML Parsing|SimpleXML Parsing]]
-- [[_COMMUNITY_Cache Persistence|Cache Persistence]]
-- [[_COMMUNITY_Event and Email Mocking|Event and Email Mocking]]
-- [[_COMMUNITY_Mime Type Validation|Mime Type Validation]]
-- [[_COMMUNITY_Class Context Reflection|Class Context Reflection]]
-- [[_COMMUNITY_Database Transaction Control|Database Transaction Control]]
-- [[_COMMUNITY_Database Utility Functions|Database Utility Functions]]
-- [[_COMMUNITY_Encryption Decorators|Encryption Decorators]]
-- [[_COMMUNITY_File Information|File Information]]
-- [[_COMMUNITY_Stream Filtering|Stream Filtering]]
+- [[_COMMUNITY_Tab and Value Rendering|Tab and Value Rendering]]
+- [[_COMMUNITY_API Exception Handling|API Exception Handling]]
+- [[_COMMUNITY_API Response Trait|API Response Trait]]
+- [[_COMMUNITY_Array Helper Utilities|Array Helper Utilities]]
+- [[_COMMUNITY_Database Mocking Utilities|Database Mocking Utilities]]
+- [[_COMMUNITY_Database Query Metadata|Database Query Metadata]]
+- [[_COMMUNITY_System Exception Handler|System Exception Handler]]
+- [[_COMMUNITY_Output Escaping|Output Escaping]]
+- [[_COMMUNITY_Site URI Management|Site URI Management]]
+- [[_COMMUNITY_User Agent Detection|User Agent Detection]]
+- [[_COMMUNITY_Date Comparison Utilities|Date Comparison Utilities]]
+- [[_COMMUNITY_Method and Callable Parsing|Method and Callable Parsing]]
+- [[_COMMUNITY_Unit Testing Helpers|Unit Testing Helpers]]
+- [[_COMMUNITY_SQLite Database Connection|SQLite Database Connection]]
+- [[_COMMUNITY_Validation Interface|Validation Interface]]
+- [[_COMMUNITY_Route and Filter Collection|Route and Filter Collection]]
+- [[_COMMUNITY_View Cell Components|View Cell Components]]
+- [[_COMMUNITY_PHP Extension Requirements|PHP Extension Requirements]]
+- [[_COMMUNITY_Controller Discovery|Controller Discovery]]
+- [[_COMMUNITY_General Utility Functions|General Utility Functions]]
+- [[_COMMUNITY_SQLSRV Database Connection|SQLSRV Database Connection]]
+- [[_COMMUNITY_Pagination Logic|Pagination Logic]]
+- [[_COMMUNITY_Proxy and Array Plugins|Proxy and Array Plugins]]
+- [[_COMMUNITY_Data Parser Engine|Data Parser Engine]]
+- [[_COMMUNITY_Template Parser Engine|Template Parser Engine]]
+- [[_COMMUNITY_Asset and Plain Rendering|Asset and Plain Rendering]]
+- [[_COMMUNITY_Namespace Autoloader|Namespace Autoloader]]
+- [[_COMMUNITY_File Location Service|File Location Service]]
+- [[_COMMUNITY_Controller Route Reader|Controller Route Reader]]
+- [[_COMMUNITY_Code Generation Helpers|Code Generation Helpers]]
+- [[_COMMUNITY_CLI Request Handling|CLI Request Handling]]
+- [[_COMMUNITY_CORS Header Management|CORS Header Management]]
+- [[_COMMUNITY_Application Data Models|Application Data Models]]
+- [[_COMMUNITY_Strict Validation Rules|Strict Validation Rules]]
+- [[_COMMUNITY_Database Table Management|Database Table Management]]
+- [[_COMMUNITY_Database Testing Trait|Database Testing Trait]]
+- [[_COMMUNITY_Connection Interface|Connection Interface]]
+- [[_COMMUNITY_Database Seeding|Database Seeding]]
+- [[_COMMUNITY_Feature Testing Trait|Feature Testing Trait]]
+- [[_COMMUNITY_File Collection Management|File Collection Management]]
+- [[_COMMUNITY_Mock Cache Handler|Mock Cache Handler]]
+- [[_COMMUNITY_Query Builder Operations|Query Builder Operations]]
+- [[_COMMUNITY_Session Data Access|Session Data Access]]
+- [[_COMMUNITY_Query Builder Selection|Query Builder Selection]]
+- [[_COMMUNITY_Data Type Casting|Data Type Casting]]
+- [[_COMMUNITY_Session Handler Base|Session Handler Base]]
+- [[_COMMUNITY_Database Utility Base|Database Utility Base]]
+- [[_COMMUNITY_Response Cache Management|Response Cache Management]]
+- [[_COMMUNITY_Core Service Proxies|Core Service Proxies]]
+- [[_COMMUNITY_Toolbar Database Integration|Toolbar Database Integration]]
+- [[_COMMUNITY_Kint Debugger Entry|Kint Debugger Entry]]
+- [[_COMMUNITY_Value Representation Context|Value Representation Context]]
+- [[_COMMUNITY_Length Validation Rules|Length Validation Rules]]
+- [[_COMMUNITY_Validation Logic|Validation Logic]]
+- [[_COMMUNITY_HTML Table Generator|HTML Table Generator]]
+- [[_COMMUNITY_Database Forge Base|Database Forge Base]]
+- [[_COMMUNITY_Debug Collector Base|Debug Collector Base]]
+- [[_COMMUNITY_Class Context Parsing|Class Context Parsing]]
+- [[_COMMUNITY_Cookie Store Management|Cookie Store Management]]
+- [[_COMMUNITY_Subquery Builder|Subquery Builder]]
+- [[_COMMUNITY_Database Session Handler|Database Session Handler]]
+- [[_COMMUNITY_Encryption Service|Encryption Service]]
+- [[_COMMUNITY_Image Processing Exceptions|Image Processing Exceptions]]
+- [[_COMMUNITY_APCu Cache Handler|APCu Cache Handler]]
+- [[_COMMUNITY_ImageMagick Handler|ImageMagick Handler]]
+- [[_COMMUNITY_Text Manipulation Helpers|Text Manipulation Helpers]]
+- [[_COMMUNITY_Pagination State Access|Pagination State Access]]
+- [[_COMMUNITY_CLI Stream Mocking|CLI Stream Mocking]]
+- [[_COMMUNITY_Resource and Stream Parsing|Resource and Stream Parsing]]
+- [[_COMMUNITY_DOM Assertion Parser|DOM Assertion Parser]]
+- [[_COMMUNITY_Testing Logic Exceptions|Testing Logic Exceptions]]
+- [[_COMMUNITY_Mock Query Builder|Mock Query Builder]]
+- [[_COMMUNITY_Array Casting|Array Casting]]
+- [[_COMMUNITY_Debug History Collection|Debug History Collection]]
+- [[_COMMUNITY_I18n Date Exceptions|I18n Date Exceptions]]
+- [[_COMMUNITY_Memcached Handler|Memcached Handler]]
+- [[_COMMUNITY_Content Negotiation|Content Negotiation]]
+- [[_COMMUNITY_Mock Session Handling|Mock Session Handling]]
+- [[_COMMUNITY_Logging and Autoload Config|Logging and Autoload Config]]
+- [[_COMMUNITY_Language Translation Service|Language Translation Service]]
+- [[_COMMUNITY_Response Formatters|Response Formatters]]
+- [[_COMMUNITY_Filter and Performance Metrics|Filter and Performance Metrics]]
+- [[_COMMUNITY_Dummy Cache Handler|Dummy Cache Handler]]
+- [[_COMMUNITY_OCI8 Database Forge|OCI8 Database Forge]]
+- [[_COMMUNITY_Cache Interface Methods|Cache Interface Methods]]
+- [[_COMMUNITY_CLI Chatbot Service|CLI Chatbot Service]]
+- [[_COMMUNITY_Database Backup Utilities|Database Backup Utilities]]
+- [[_COMMUNITY_File Metadata Management|File Metadata Management]]
+- [[_COMMUNITY_Stream Filter Testing|Stream Filter Testing]]
 - [[_COMMUNITY_Wincache Handler|Wincache Handler]]
 - [[_COMMUNITY_Image Handler Interface|Image Handler Interface]]
 - [[_COMMUNITY_System Logger|System Logger]]
-- [[_COMMUNITY_View Configuration|View Configuration]]
-- [[_COMMUNITY_Route Filter Attributes|Route Filter Attributes]]
-- [[_COMMUNITY_Array Casting|Array Casting]]
+- [[_COMMUNITY_Legacy Auto-Routing|Legacy Auto-Routing]]
+- [[_COMMUNITY_Admin Reporting Service|Admin Reporting Service]]
+- [[_COMMUNITY_Client History Service|Client History Service]]
+- [[_COMMUNITY_Class Constant Parsing|Class Constant Parsing]]
 - [[_COMMUNITY_Database Debug Collector|Database Debug Collector]]
-- [[_COMMUNITY_Query Interface|Query Interface]]
+- [[_COMMUNITY_Kint Parser Integration|Kint Parser Integration]]
+- [[_COMMUNITY_Class and String Parsing|Class and String Parsing]]
+- [[_COMMUNITY_Query Execution Interface|Query Execution Interface]]
+- [[_COMMUNITY_Exception Rendering|Exception Rendering]]
 - [[_COMMUNITY_Event Dispatcher|Event Dispatcher]]
 - [[_COMMUNITY_Enum and Cast Exceptions|Enum and Cast Exceptions]]
 - [[_COMMUNITY_Data Access Exceptions|Data Access Exceptions]]
-- [[_COMMUNITY_Session Handler Logic|Session Handler Logic]]
+- [[_COMMUNITY_Honeypot Spam Protection|Honeypot Spam Protection]]
+- [[_COMMUNITY_Session Handler Implementation|Session Handler Implementation]]
 - [[_COMMUNITY_Time Difference Calculation|Time Difference Calculation]]
-- [[_COMMUNITY_Function Reflection|Function Reflection]]
-- [[_COMMUNITY_Microtime Performance Data|Microtime Performance Data]]
-- [[_COMMUNITY_Trace and Lock Plugins|Trace and Lock Plugins]]
-- [[_COMMUNITY_Legacy Auto Router|Legacy Auto Router]]
-- [[_COMMUNITY_Localization Finder|Localization Finder]]
+- [[_COMMUNITY_Package Metadata|Package Metadata]]
+- [[_COMMUNITY_Microtime Performance Representation|Microtime Performance Representation]]
+- [[_COMMUNITY_Localization File Finder|Localization File Finder]]
 - [[_COMMUNITY_Request Throttling|Request Throttling]]
-- [[_COMMUNITY_Immutable Cookie Interface|Immutable Cookie Interface]]
-- [[_COMMUNITY_Table Name Parsing|Table Name Parsing]]
-- [[_COMMUNITY_Time and Timestamp Handling|Time and Timestamp Handling]]
-- [[_COMMUNITY_Base Exception Handling|Base Exception Handling]]
-- [[_COMMUNITY_Error and Log Handling|Error and Log Handling]]
+- [[_COMMUNITY_File Locator Interface|File Locator Interface]]
 - [[_COMMUNITY_Community 200|Community 200]]
 - [[_COMMUNITY_Community 201|Community 201]]
+- [[_COMMUNITY_Community 202|Community 202]]
 - [[_COMMUNITY_Community 203|Community 203]]
 - [[_COMMUNITY_Community 204|Community 204]]
-- [[_COMMUNITY_Community 205|Community 205]]
-- [[_COMMUNITY_Community 207|Community 207]]
+- [[_COMMUNITY_Community 206|Community 206]]
 - [[_COMMUNITY_Community 208|Community 208]]
 - [[_COMMUNITY_Community 209|Community 209]]
 - [[_COMMUNITY_Community 210|Community 210]]
+- [[_COMMUNITY_Community 211|Community 211]]
 - [[_COMMUNITY_Community 212|Community 212]]
+- [[_COMMUNITY_Community 214|Community 214]]
 - [[_COMMUNITY_Community 215|Community 215]]
 - [[_COMMUNITY_Community 216|Community 216]]
-- [[_COMMUNITY_Community 217|Community 217]]
 - [[_COMMUNITY_Community 218|Community 218]]
 - [[_COMMUNITY_Community 219|Community 219]]
 - [[_COMMUNITY_Community 220|Community 220]]
-- [[_COMMUNITY_Community 221|Community 221]]
-- [[_COMMUNITY_Community 222|Community 222]]
-- [[_COMMUNITY_Community 223|Community 223]]
 - [[_COMMUNITY_Community 224|Community 224]]
 - [[_COMMUNITY_Community 225|Community 225]]
 - [[_COMMUNITY_Community 226|Community 226]]
+- [[_COMMUNITY_Community 227|Community 227]]
 - [[_COMMUNITY_Community 228|Community 228]]
+- [[_COMMUNITY_Community 229|Community 229]]
 - [[_COMMUNITY_Community 230|Community 230]]
 - [[_COMMUNITY_Community 231|Community 231]]
 - [[_COMMUNITY_Community 232|Community 232]]
 - [[_COMMUNITY_Community 233|Community 233]]
 - [[_COMMUNITY_Community 234|Community 234]]
-- [[_COMMUNITY_Community 235|Community 235]]
 - [[_COMMUNITY_Community 236|Community 236]]
 - [[_COMMUNITY_Community 237|Community 237]]
 - [[_COMMUNITY_Community 238|Community 238]]
@@ -244,13 +247,15 @@
 - [[_COMMUNITY_Community 249|Community 249]]
 - [[_COMMUNITY_Community 250|Community 250]]
 - [[_COMMUNITY_Community 251|Community 251]]
+- [[_COMMUNITY_Community 252|Community 252]]
 - [[_COMMUNITY_Community 253|Community 253]]
-- [[_COMMUNITY_Community 254|Community 254]]
 - [[_COMMUNITY_Community 255|Community 255]]
 - [[_COMMUNITY_Community 256|Community 256]]
+- [[_COMMUNITY_Community 257|Community 257]]
 - [[_COMMUNITY_Community 258|Community 258]]
 - [[_COMMUNITY_Community 259|Community 259]]
 - [[_COMMUNITY_Community 260|Community 260]]
+- [[_COMMUNITY_Community 261|Community 261]]
 - [[_COMMUNITY_Community 262|Community 262]]
 - [[_COMMUNITY_Community 263|Community 263]]
 - [[_COMMUNITY_Community 264|Community 264]]
@@ -260,8 +265,8 @@
 - [[_COMMUNITY_Community 268|Community 268]]
 - [[_COMMUNITY_Community 269|Community 269]]
 - [[_COMMUNITY_Community 270|Community 270]]
-- [[_COMMUNITY_Community 271|Community 271]]
 - [[_COMMUNITY_Community 272|Community 272]]
+- [[_COMMUNITY_Community 273|Community 273]]
 - [[_COMMUNITY_Community 274|Community 274]]
 - [[_COMMUNITY_Community 275|Community 275]]
 - [[_COMMUNITY_Community 276|Community 276]]
@@ -276,6 +281,7 @@
 - [[_COMMUNITY_Community 285|Community 285]]
 - [[_COMMUNITY_Community 286|Community 286]]
 - [[_COMMUNITY_Community 287|Community 287]]
+- [[_COMMUNITY_Community 288|Community 288]]
 - [[_COMMUNITY_Community 289|Community 289]]
 - [[_COMMUNITY_Community 290|Community 290]]
 - [[_COMMUNITY_Community 291|Community 291]]
@@ -311,7 +317,6 @@
 - [[_COMMUNITY_Community 321|Community 321]]
 - [[_COMMUNITY_Community 322|Community 322]]
 - [[_COMMUNITY_Community 323|Community 323]]
-- [[_COMMUNITY_Community 324|Community 324]]
 - [[_COMMUNITY_Community 325|Community 325]]
 - [[_COMMUNITY_Community 326|Community 326]]
 - [[_COMMUNITY_Community 327|Community 327]]
@@ -320,23 +325,22 @@
 - [[_COMMUNITY_Community 330|Community 330]]
 - [[_COMMUNITY_Community 331|Community 331]]
 - [[_COMMUNITY_Community 332|Community 332]]
-- [[_COMMUNITY_Community 333|Community 333]]
-- [[_COMMUNITY_Community 334|Community 334]]
+- [[_COMMUNITY_Community 335|Community 335]]
 - [[_COMMUNITY_Community 336|Community 336]]
-- [[_COMMUNITY_Community 337|Community 337]]
 - [[_COMMUNITY_Community 338|Community 338]]
 - [[_COMMUNITY_Community 339|Community 339]]
 - [[_COMMUNITY_Community 340|Community 340]]
 - [[_COMMUNITY_Community 341|Community 341]]
-- [[_COMMUNITY_Serialization Plugins|Serialization Plugins]]
+- [[_COMMUNITY_Community 342|Community 342]]
 - [[_COMMUNITY_Community 344|Community 344]]
-- [[_COMMUNITY_Community 345|Community 345]]
+- [[_COMMUNITY_Community 346|Community 346]]
 - [[_COMMUNITY_Community 347|Community 347]]
 - [[_COMMUNITY_Community 348|Community 348]]
+- [[_COMMUNITY_Community 349|Community 349]]
 - [[_COMMUNITY_Community 350|Community 350]]
-- [[_COMMUNITY_Community 352|Community 352]]
-- [[_COMMUNITY_Community 353|Community 353]]
+- [[_COMMUNITY_Community 351|Community 351]]
 - [[_COMMUNITY_Community 354|Community 354]]
+- [[_COMMUNITY_Community 355|Community 355]]
 - [[_COMMUNITY_Community 356|Community 356]]
 - [[_COMMUNITY_Community 357|Community 357]]
 - [[_COMMUNITY_Community 358|Community 358]]
@@ -347,16 +351,16 @@
 - [[_COMMUNITY_Community 363|Community 363]]
 - [[_COMMUNITY_Community 364|Community 364]]
 - [[_COMMUNITY_Community 365|Community 365]]
-- [[_COMMUNITY_Community 366|Community 366]]
 - [[_COMMUNITY_Community 367|Community 367]]
 - [[_COMMUNITY_Community 368|Community 368]]
+- [[_COMMUNITY_Community 369|Community 369]]
 - [[_COMMUNITY_Community 370|Community 370]]
 - [[_COMMUNITY_Community 371|Community 371]]
 - [[_COMMUNITY_Community 372|Community 372]]
 - [[_COMMUNITY_Community 373|Community 373]]
 - [[_COMMUNITY_Community 374|Community 374]]
+- [[_COMMUNITY_Community 375|Community 375]]
 - [[_COMMUNITY_Community 376|Community 376]]
-- [[_COMMUNITY_Community 377|Community 377]]
 - [[_COMMUNITY_Community 378|Community 378]]
 - [[_COMMUNITY_Community 379|Community 379]]
 - [[_COMMUNITY_Community 380|Community 380]]
@@ -364,8 +368,9 @@
 - [[_COMMUNITY_Community 382|Community 382]]
 - [[_COMMUNITY_Community 383|Community 383]]
 - [[_COMMUNITY_Community 384|Community 384]]
+- [[_COMMUNITY_Community 385|Community 385]]
+- [[_COMMUNITY_Community 386|Community 386]]
 - [[_COMMUNITY_Community 387|Community 387]]
-- [[_COMMUNITY_Community 388|Community 388]]
 - [[_COMMUNITY_Community 389|Community 389]]
 - [[_COMMUNITY_Community 390|Community 390]]
 - [[_COMMUNITY_Community 391|Community 391]]
@@ -375,24 +380,24 @@
 - [[_COMMUNITY_Community 397|Community 397]]
 - [[_COMMUNITY_Community 398|Community 398]]
 - [[_COMMUNITY_Community 399|Community 399]]
-- [[_COMMUNITY_Community 400|Community 400]]
-- [[_COMMUNITY_Community 401|Community 401]]
-- [[_COMMUNITY_Community 402|Community 402]]
-- [[_COMMUNITY_Community 403|Community 403]]
-- [[_COMMUNITY_Community 404|Community 404]]
 - [[_COMMUNITY_Community 405|Community 405]]
 - [[_COMMUNITY_Community 406|Community 406]]
-- [[_COMMUNITY_Community 407|Community 407]]
 - [[_COMMUNITY_Community 408|Community 408]]
 - [[_COMMUNITY_Community 409|Community 409]]
+- [[_COMMUNITY_Community 410|Community 410]]
 - [[_COMMUNITY_Community 411|Community 411]]
 - [[_COMMUNITY_Community 412|Community 412]]
 - [[_COMMUNITY_Community 413|Community 413]]
-- [[_COMMUNITY_Community 457|Community 457]]
-- [[_COMMUNITY_Community 459|Community 459]]
-- [[_COMMUNITY_Community 463|Community 463]]
-- [[_COMMUNITY_Community 484|Community 484]]
-- [[_COMMUNITY_Community 485|Community 485]]
+- [[_COMMUNITY_Community 414|Community 414]]
+- [[_COMMUNITY_Community 416|Community 416]]
+- [[_COMMUNITY_Community 417|Community 417]]
+- [[_COMMUNITY_Community 418|Community 418]]
+- [[_COMMUNITY_Community 419|Community 419]]
+- [[_COMMUNITY_Community 431|Community 431]]
+- [[_COMMUNITY_Community 473|Community 473]]
+- [[_COMMUNITY_Community 474|Community 474]]
+- [[_COMMUNITY_Community 480|Community 480]]
+- [[_COMMUNITY_Community 491|Community 491]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `service()` - 174 edges
@@ -407,705 +412,753 @@
 10. `URI` - 43 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `img_data()` --calls--> `Mimes`  [INFERRED]
-  system/Helpers/html_helper.php → app/Config/Mimes.php
-- `App Index` --conceptually_related_to--> `CodeIgniter 4 Framework`  [INFERRED]
-  app/index.html → README.md
-- `getCookie()` --calls--> `log_message()`  [INFERRED]
-  system/HTTP/ResponseTrait.php → system/Common.php
-- `set_checkbox()` --calls--> `service()`  [INFERRED]
-  system/Helpers/form_helper.php → system/Common.php
-- `set_radio()` --calls--> `service()`  [INFERRED]
-  system/Helpers/form_helper.php → system/Common.php
+- `AdminController Documentation` --calls--> `ReportingService`  [EXTRACTED]
+  docs/controllers/AdminController.md → app/Services/ReportingService.php
+- `ClientHistoryController Documentation` --calls--> `ClientHistoryService`  [EXTRACTED]
+  docs/controllers/ClientHistoryController.md → app/Services/ClientHistoryService.php
+- `Chatbot Integration for Appointment System` --references--> `ChatbotController`  [EXTRACTED]
+  docs/chatbot.md → app/Controllers/ChatbotController.php
+- `AuthController Documentation` --calls--> `StaffManagementService`  [EXTRACTED]
+  docs/controllers/AuthController.md → app/Services/StaffManagementService.php
+- `ScheduleController Documentation` --calls--> `ScheduleService`  [EXTRACTED]
+  docs/controllers/ScheduleController.md → app/Services/ScheduleService.php
 
 ## Import Cycles
 - None detected.
 
-## Communities (486 total, 213 thin omitted)
+## Communities (509 total, 206 thin omitted)
 
-### Community 0 - "Routing and Cookies"
-Cohesion: 0.06
-Nodes (38): Routes, CookieStore, get_cookie(), has_cookie(), set_cookie(), RedirectResponse, RedirectResponse, Response (+30 more)
-
-### Community 1 - "HTTP Message Headers"
+### Community 0 - "HTTP Message Handling"
 Cohesion: 0.06
 Nodes (23): Message, addHeader(), appendBody(), appendHeader(), checkMultipleHeaders(), getHeaderName(), hasMultipleHeaders(), header() (+15 more)
 
-### Community 3 - "Debug Configuration"
-Cohesion: 0.04
-Nodes (46): CI_VERSION, collectors, config, baseURL, ciVersion, cspEnabled, environment, locale (+38 more)
-
-### Community 5 - "API Exception Handling"
-Cohesion: 0.08
-Nodes (24): ApiException, BaseTransformer, fail(), failForbidden(), failNotFound(), failResourceExists(), failResourceGone(), failServerError() (+16 more)
-
-### Community 7 - "Service Container Accessors"
+### Community 1 - "Cookie Security Validation"
 Cohesion: 0.06
-Nodes (14): CSPConfig, FiltersConfig, FormatConfig, App, Services, EncryptionConfig, ExceptionsConfig, HoneypotConfig (+6 more)
+Nodes (13): CookieConfig, InvalidChars, Security, verify(), SecurityInterface, RequestInterface, ResponseInterface, static (+5 more)
 
-### Community 10 - "Framework Bootstrapping"
-Cohesion: 0.10
-Nodes (3): PageNotFoundException, CodeIgniter, Cache
+### Community 2 - "Framework Bootstrapping"
+Cohesion: 0.08
+Nodes (8): PageNotFoundException, Request, CodeIgniter, App, Cache, Filters, ResponseCache, ResponseInterface
 
-### Community 11 - "CLI Cache Commands"
-Cohesion: 0.07
-Nodes (10): ClearCache, Commands, Help, MigrateStatus, TransformerGenerator, ClearDebugbar, Serve, LoggerInterface (+2 more)
+### Community 3 - "Abstract Data Representations"
+Cohesion: 0.05
+Nodes (6): CallableDefinitionRepresentation, SourceRepresentation, ContextInterface, DeclaredCallableBag, AbstractValue, FunctionValue
 
-### Community 12 - "Security and CSRF"
+### Community 4 - "Cookie and HTTPS Management"
 Cohesion: 0.09
-Nodes (10): CookieConfig, sanitize_filename(), Security, verify(), SecurityInterface, IncomingRequest, RequestInterface, SecurityConfig (+2 more)
+Nodes (32): CookieStore, get_cookie(), has_cookie(), set_cookie(), RedirectResponse, RedirectResponse, app_timezone(), cache() (+24 more)
 
-### Community 14 - "App Console Runner"
+### Community 5 - "CLI Cache Commands"
+Cohesion: 0.06
+Nodes (11): ClearCache, Commands, Help, MigrateStatus, Seed, ClearDebugbar, Serve, LoggerInterface (+3 more)
+
+### Community 6 - "Service Factory Methods"
+Cohesion: 0.06
+Nodes (15): CSPConfig, FiltersConfig, FormatConfig, Superglobals, App, Services, EncryptionConfig, ExceptionsConfig (+7 more)
+
+### Community 7 - "Time and Date Utilities"
 Cohesion: 0.07
-Nodes (15): App, Console, CodeIgniter, Config, Request, fetchGlobal(), getClientIP(), getIPAddress() (+7 more)
+Nodes (21): addCalendarMonths(), createFromInstance(), getDay(), getDayOfWeek(), getDayOfYear(), getHour(), getMinute(), getMonth() (+13 more)
 
-### Community 15 - "Autoload and Exceptions"
+### Community 11 - "Exception Interfaces"
+Cohesion: 0.06
+Nodes (14): DebugTraceableTrait, InvalidArgumentException, RuntimeException, ExceptionInterface, CacheException, CriticalError, DatabaseException, __construct() (+6 more)
+
+### Community 12 - "File and Class Generation"
+Cohesion: 0.07
+Nodes (20): basename(), buildContent(), buildPath(), execute(), generateClass(), generateFile(), generateView(), getNamespace() (+12 more)
+
+### Community 14 - "Application Configuration"
+Cohesion: 0.07
+Nodes (16): App, Cookie, Cors, CURLRequest, Email, Feature, Format, Generators (+8 more)
+
+### Community 15 - "Autoloading and Booting"
 Cohesion: 0.08
-Nodes (11): DebugTraceableTrait, RuntimeException, ExceptionInterface, CacheException, CriticalError, DatabaseException, __construct(), RuntimeException (+3 more)
+Nodes (5): Autoload, Console, Paths, Boot, CodeIgniter
 
-### Community 16 - "Code Generation Utilities"
-Cohesion: 0.08
-Nodes (17): basename(), buildContent(), buildPath(), execute(), generateClass(), generateFile(), generateView(), getOption() (+9 more)
+### Community 16 - "Content Security Policy"
+Cohesion: 0.11
+Nodes (3): ContentSecurityPolicy, ResponseInterface, static
 
-### Community 17 - "Request Router"
-Cohesion: 0.09
-Nodes (7): Router, Request, RequestInterface, ResponseInterface, RouteCollectionInterface, self, Throwable
+### Community 18 - "Request Filter Management"
+Cohesion: 0.11
+Nodes (6): FilterException, Filters, Modules, RequestInterface, ResponseInterface, self
 
-### Community 18 - "Helper and Number Utilities"
-Cohesion: 0.08
-Nodes (8): format_number(), number_to_amount(), number_to_currency(), number_to_size(), character_limiter(), word_limiter(), helper(), Filters
+### Community 19 - "Route Collection Interface"
+Cohesion: 0.06
+Nodes (6): RouteCollectionInterface, set404Override(), setAutoRoute(), setDefaultMethod(), setDefaultNamespace(), self
 
-### Community 19 - "Frontend UI Logic"
+### Community 20 - "Console and Request Config"
+Cohesion: 0.07
+Nodes (15): App, Console, Config, Request, fetchGlobal(), getClientIP(), getIPAddress(), getServer() (+7 more)
+
+### Community 21 - "Frontend Folder Logic"
 Cohesion: 0.17
 Nodes (32): #a(), addToFolder(), #c(), constructor(), d(), E(), f(), folder() (+24 more)
 
-### Community 22 - "Abstract Rendering Engine"
+### Community 25 - "Value Parsing Plugins"
+Cohesion: 0.08
+Nodes (9): AbstractValue, ContextInterface, Parser, ContextInterface, ContextInterface, ContextInterface, ContextInterface, UnknownValue (+1 more)
+
+### Community 26 - "Abstract Content Rendering"
 Cohesion: 0.10
 Nodes (5): ConstructableRendererInterface, AbstractRenderer, TextRenderer, AbstractValue, PluginInterface
 
-### Community 23 - "File System Collection"
-Cohesion: 0.11
-Nodes (4): FileCollection, directory_map(), set_realpath(), Generator
+### Community 28 - "Redis Cache Handler"
+Cohesion: 0.07
+Nodes (3): PredisHandler, Cache, Cache
 
-### Community 25 - "CURL HTTP Client"
+### Community 29 - "HTTP Response Trait"
+Cohesion: 0.09
+Nodes (27): deleteCookie(), dispatchCookies(), doSetCookie(), doSetRawCookie(), formatBody(), getCookie(), getCookies(), getCSP() (+19 more)
+
+### Community 30 - "Number and Text Helpers"
+Cohesion: 0.09
+Nodes (9): format_number(), number_to_amount(), number_to_currency(), number_to_size(), character_limiter(), highlight_phrase(), word_limiter(), helper() (+1 more)
+
+### Community 31 - "Factory Instance Caching"
+Cohesion: 0.08
+Nodes (4): FactoriesCache, FactoriesCache, FileVarExportHandler, FileVarExportHandler
+
+### Community 32 - "CURL HTTP Client"
 Cohesion: 0.13
 Nodes (6): CURLRequest, CurlShareHandle, CURLRequest, App, ResponseInterface, URI
 
-### Community 27 - "File and Path Plugins"
-Cohesion: 0.10
-Nodes (5): SplFileInfoPlugin, SplFileInfo, AbstractValue, AbstractValue, AbstractValue
+### Community 34 - "Database Model Operations"
+Cohesion: 0.11
+Nodes (4): Model, Closure, ConnectionInterface, ValidationInterface
 
-### Community 30 - "App Environment Config"
-Cohesion: 0.10
-Nodes (11): App, Cookie, CURLRequest, Email, Feature, Honeypot, Images, Migrations (+3 more)
+### Community 36 - "DOM Node Parsing"
+Cohesion: 0.13
+Nodes (13): DomNodeListValue, DomNodeValue, DomPlugin, AbstractValue, ClassMethodsPlugin, ClassStaticsPlugin, ContextInterface, InstanceValue (+5 more)
 
-### Community 33 - "Exception Handler Logic"
-Cohesion: 0.12
-Nodes (7): Exceptions, ResponseTrait, RequestInterface, ResponseInterface, Throwable, ExceptionsConfig, Throwable
-
-### Community 34 - "Response Cookie Trait"
-Cohesion: 0.10
-Nodes (26): deleteCookie(), dispatchCookies(), doSetCookie(), doSetRawCookie(), formatBody(), getCookie(), getCookies(), getCSP() (+18 more)
-
-### Community 35 - "Value Parsing Plugins"
+### Community 37 - "DateTime Parsing Plugins"
 Cohesion: 0.09
 Nodes (9): InstanceValue, AbstractValue, ContextInterface, ContextInterface, DateTimeInterface, ContextInterface, ContextInterface, Throwable (+1 more)
 
-### Community 36 - "Color and Binary Plugins"
-Cohesion: 0.09
-Nodes (6): BinaryPlugin, ColorPlugin, AbstractValue, AbstractValue, ContextInterface, ColorValue
+### Community 38 - "Binary and Color Plugins"
+Cohesion: 0.08
+Nodes (7): BinaryPlugin, ColorPlugin, AbstractValue, AbstractValue, AbstractValue, ContextInterface, ColorValue
 
-### Community 37 - "Image Manipulation"
+### Community 39 - "File Cache Handler"
+Cohesion: 0.09
+Nodes (8): ext-fileinfo, delete_files(), directory_map(), get_dir_file_info(), write_file(), Cache, FileHandler, is_really_writable()
+
+### Community 41 - "Image Manipulation"
 Cohesion: 0.12
 Nodes (3): Image, BaseHandler, static
 
-### Community 38 - "HTML Form Helpers"
-Cohesion: 0.13
-Nodes (25): form_button(), form_checkbox(), form_datalist(), form_dropdown(), form_fieldset(), form_hidden(), form_input(), form_multiselect() (+17 more)
-
-### Community 40 - "Database Model Methods"
-Cohesion: 0.13
-Nodes (4): Model, Closure, ConnectionInterface, ValidationInterface
-
-### Community 41 - "CLI Signal Handling"
+### Community 42 - "Process Signal Handling"
 Cohesion: 0.11
 Nodes (15): blockSignals(), callCustomHandler(), getProcessState(), getSignalName(), handleSignal(), isPcntlAvailable(), isPosixAvailable(), registerSignals() (+7 more)
 
-### Community 42 - "File Cache Handler"
+### Community 43 - "Appointment Controller"
+Cohesion: 0.08
+Nodes (6): Home, UiPreview, create(), today(), tomorrow(), yesterday()
+
+### Community 44 - "HTML Tag Helpers"
+Cohesion: 0.17
+Nodes (21): DocTypes, audio(), embed(), _has_protocol(), img(), link_tag(), _list(), _media() (+13 more)
+
+### Community 45 - "Form UI Helpers"
+Cohesion: 0.13
+Nodes (24): form_button(), form_checkbox(), form_datalist(), form_dropdown(), form_fieldset(), form_hidden(), form_input(), form_multiselect() (+16 more)
+
+### Community 48 - "Parser Plugin Base"
 Cohesion: 0.10
-Nodes (8): ext-fileinfo, delete_files(), get_dir_file_info(), same_file(), write_file(), Cache, FileHandler, is_really_writable()
+Nodes (10): AbstractPlugin, Parser, AbstractValue, AbstractValue, AbstractValue, AbstractValue, AbstractValue, LockPlugin (+2 more)
 
-### Community 44 - "DOM Parsing Plugins"
-Cohesion: 0.14
-Nodes (11): DomNodeListValue, DomNodeValue, DomPlugin, AbstractValue, ContextInterface, InstanceValue, Parser, ContextInterface (+3 more)
-
-### Community 47 - "Framework Entry Points"
+### Community 49 - "URL and Link Helpers"
 Cohesion: 0.10
-Nodes (3): Paths, Boot, CodeIgniter
+Nodes (18): buildLinks(), convert_accented_characters(), anchor(), anchor_popup(), auto_link(), current_url(), index_page(), mailto() (+10 more)
 
-### Community 48 - "Route Collection Interface"
-Cohesion: 0.07
-Nodes (6): RouteCollectionInterface, setAutoRoute(), setDefaultMethod(), setDefaultNamespace(), Closure, self
+### Community 50 - "View Rendering and Paging"
+Cohesion: 0.10
+Nodes (5): render(), RendererInterface, PagerConfig, AbstractValue, View
 
-### Community 50 - "URL and Link Helpers"
-Cohesion: 0.12
-Nodes (19): buildLinks(), script_tag(), convert_accented_characters(), anchor(), anchor_popup(), auto_link(), current_url(), index_page() (+11 more)
-
-### Community 52 - "HTML and Media Helpers"
-Cohesion: 0.16
-Nodes (18): DocTypes, audio(), embed(), _has_protocol(), img(), link_tag(), _list(), _media() (+10 more)
-
-### Community 54 - "Plugin Rendering System"
-Cohesion: 0.11
-Nodes (15): AbstractPlugin, ConstructablePluginInterface, __construct(), AbstractPlugin, Parser, Parser, AbstractValue, RichRenderer (+7 more)
-
-### Community 55 - "Context and Base Plugins"
+### Community 54 - "Array and Iterator Parsing"
 Cohesion: 0.09
-Nodes (4): IteratorPlugin, AbstractValue, AbstractValue, AbstractValue
+Nodes (5): IteratorPlugin, AbstractValue, ContextInterface, InstanceValue, TraceValue
 
-### Community 57 - "Data Formatting Utilities"
-Cohesion: 0.14
-Nodes (4): Format, self, static, Fabricator
-
-### Community 60 - "Framework Specific Exceptions"
-Cohesion: 0.10
-Nodes (3): LogException, SessionException, DirectoryHasher
-
-### Community 64 - "Database Debug Toolbar"
-Cohesion: 0.14
-Nodes (7): Config, Database, Toolbar, IncomingRequest, RequestInterface, ResponseInterface, ToolbarConfig
-
-### Community 66 - "Encryption and Keys"
+### Community 55 - "Request Routing Engine"
 Cohesion: 0.11
-Nodes (3): Encryption, OpenSSLHandler, EncryptionConfig
+Nodes (3): Router, self, Throwable
 
-### Community 70 - "JSON and Table Plugins"
+### Community 56 - "Service Locator"
+Cohesion: 0.08
+Nodes (3): Services, CodeIgniter, WorkerMode
+
+### Community 59 - "Mock Data Fabricator"
+Cohesion: 0.11
+Nodes (6): Format, Closure, Generator, self, static, Fabricator
+
+### Community 60 - "Context and Closure Parsing"
+Cohesion: 0.09
+Nodes (3): AbstractValue, AbstractValue, AbstractValue
+
+### Community 62 - "Framework System Exceptions"
+Cohesion: 0.07
+Nodes (4): CookieException, LogException, SessionException, DirectoryHasher
+
+### Community 63 - "Class and JSON Plugins"
 Cohesion: 0.10
 Nodes (4): JsonPlugin, AbstractValue, AbstractValue, AbstractValue
 
-### Community 72 - "Array Helper Functions"
+### Community 65 - "Rich Content Renderer"
+Cohesion: 0.16
+Nodes (4): RichRenderer, RepresentationInterface, AbstractValue, ContextInterface
+
+### Community 68 - "Debug Toolbar Collection"
+Cohesion: 0.14
+Nodes (7): Config, Database, Toolbar, IncomingRequest, RequestInterface, ResponseInterface, ToolbarConfig
+
+### Community 69 - "Response Helper Methods"
+Cohesion: 0.09
+Nodes (5): getCSP(), setDate(), ResponseInterface, ContentSecurityPolicy, DateTime
+
+### Community 70 - "Encryption and Decryption"
+Cohesion: 0.11
+Nodes (3): Encryption, OpenSSLHandler, EncryptionConfig
+
+### Community 73 - "File System Plugins"
+Cohesion: 0.10
+Nodes (5): SplFileInfoPlugin, SplFileInfo, AbstractValue, AbstractValue, AbstractValue
+
+### Community 75 - "XML and HTML Plugins"
+Cohesion: 0.13
+Nodes (9): HtmlPlugin, parseComplete(), XmlPlugin, PluginCompleteInterface, AbstractValue, AbstractValue, AbstractValue, AbstractValue (+1 more)
+
+### Community 76 - "SimpleXML Parsing"
+Cohesion: 0.17
+Nodes (9): SimpleXMLElementValue, AbstractValue, ClassMethodsPlugin, ContextInterface, Parser, SimpleXMLElement, ContextInterface, SimpleXMLElement (+1 more)
+
+### Community 77 - "Tab and Value Rendering"
+Cohesion: 0.13
+Nodes (13): BinaryPlugin, ColorPlugin, renderTab(), AbstractValue, RepresentationInterface, AbstractValue, RepresentationInterface, AbstractValue (+5 more)
+
+### Community 79 - "API Exception Handling"
+Cohesion: 0.14
+Nodes (4): ApiException, BaseTransformer, self, TransformerInterface
+
+### Community 80 - "API Response Trait"
+Cohesion: 0.18
+Nodes (20): fail(), failForbidden(), failNotFound(), failResourceExists(), failResourceGone(), failServerError(), failTooManyRequests(), failUnauthorized() (+12 more)
+
+### Community 81 - "Array Helper Utilities"
 Cohesion: 0.11
 Nodes (3): ArrayHelper, array_group_by(), dot_array_search()
 
-### Community 73 - "Class Reflection Plugins"
+### Community 82 - "Database Mocking Utilities"
 Cohesion: 0.15
-Nodes (7): ClassConstContext, ReflectionClassConstant, ReflectionProperty, AbstractValue, AbstractValue, ReflectionClass, getPrivateMethodInvoker()
-
-### Community 75 - "HTTP Response Methods"
-Cohesion: 0.10
-Nodes (4): getCSP(), setDate(), ResponseInterface, DateTime
-
-### Community 77 - "User Agent Detection"
-Cohesion: 0.12
-Nodes (3): UserAgent, UserAgent, UserAgents
-
-### Community 78 - "Date Comparison Logic"
-Cohesion: 0.14
-Nodes (22): __construct(), createFromDate(), createFromTime(), createFromTimestamp(), difference(), equals(), getAge(), getCalendar() (+14 more)
-
-### Community 80 - "Validation Interface"
-Cohesion: 0.11
-Nodes (7): RequestInterface, ValidationInterface, reset(), setError(), setRules(), withRequest(), ValidationInterface
-
-### Community 81 - "Database Mocking"
-Cohesion: 0.16
 Nodes (7): BaseConnection, MockQuery, Query, stdClass, Closure, JsonCast, TableName
 
-### Community 82 - "Session Handler Base"
-Cohesion: 0.10
-Nodes (4): BaseHandler, Closure, BaseHandler, FileHandler
-
-### Community 83 - "PHP Extension Requirements"
-Cohesion: 0.10
-Nodes (21): suggest, ext-apcu, ext-curl, ext-dom, ext-exif, ext-gd, ext-imagick, ext-libxml (+13 more)
-
-### Community 84 - "Query Debugging"
+### Community 84 - "Database Query Metadata"
 Cohesion: 0.13
 Nodes (3): Query, ConnectionInterface, self
 
-### Community 85 - "CLI Request Handling"
-Cohesion: 0.13
-Nodes (3): CLIRequest, Request, App
+### Community 85 - "System Exception Handler"
+Cohesion: 0.17
+Nodes (5): Exceptions, HTTPExceptionInterface, ResponseTrait, ExceptionsConfig, Throwable
 
-### Community 89 - "Proxy and Object Plugins"
+### Community 88 - "User Agent Detection"
+Cohesion: 0.12
+Nodes (3): UserAgent, UserAgent, UserAgents
+
+### Community 89 - "Date Comparison Utilities"
+Cohesion: 0.14
+Nodes (22): __construct(), createFromDate(), createFromTime(), createFromTimestamp(), difference(), equals(), getAge(), getCalendar() (+14 more)
+
+### Community 90 - "Method and Callable Parsing"
+Cohesion: 0.14
+Nodes (6): MethodContext, AbstractValue, AbstractValue, CallableDefinitionRepresentation, DeclaredCallableBag, MethodValue
+
+### Community 91 - "Unit Testing Helpers"
+Cohesion: 0.12
+Nodes (3): ReflectionHelper, TestCase, HealthTest
+
+### Community 93 - "Validation Interface"
+Cohesion: 0.11
+Nodes (7): RequestInterface, ValidationInterface, reset(), setError(), setRules(), withRequest(), ValidationInterface
+
+### Community 94 - "Route and Filter Collection"
+Cohesion: 0.14
+Nodes (6): Routing, AutoRouteCollector, BaseRouting, FilterCollector, Routing, Routes
+
+### Community 95 - "View Cell Components"
+Cohesion: 0.14
+Nodes (6): BaseCell, ViewException, CacheInterface, Cell, decorateOutput(), ViewDecoratorTrait
+
+### Community 96 - "PHP Extension Requirements"
+Cohesion: 0.10
+Nodes (21): suggest, ext-apcu, ext-curl, ext-dom, ext-exif, ext-gd, ext-imagick, ext-libxml (+13 more)
+
+### Community 97 - "Controller Discovery"
+Cohesion: 0.14
+Nodes (11): ForceHTTPS, ControllerFinder, FileLocatorInterface, is_cli(), RequestInterface, Controller, LoggerInterface, RequestInterface (+3 more)
+
+### Community 101 - "Proxy and Array Plugins"
 Cohesion: 0.14
 Nodes (10): parseBegin(), ProxyPlugin, PluginBeginInterface, AbstractValue, ContextInterface, AbstractValue, ContextInterface, AbstractValue (+2 more)
 
-### Community 91 - "Asset and Plain Rendering"
+### Community 102 - "Data Parser Engine"
+Cohesion: 0.26
+Nodes (4): Parser, AbstractValue, ContextInterface, ReflectionClass
+
+### Community 104 - "Asset and Plain Rendering"
 Cohesion: 0.15
 Nodes (3): AssetRendererTrait, PlainRenderer, AbstractValue
 
-### Community 92 - "Class Autoloader"
+### Community 105 - "Namespace Autoloader"
 Cohesion: 0.18
 Nodes (4): Autoloader, ClassLoader, Autoload, Modules
 
-### Community 97 - "Database Table Schema"
+### Community 106 - "File Location Service"
+Cohesion: 0.14
+Nodes (4): FileLocator, get_filenames(), Closure, ContextInterface
+
+### Community 107 - "Controller Route Reader"
+Cohesion: 0.18
+Nodes (6): ParameterHoldingTrait, ReflectionFunctionAbstract, ControllerMethodReader, ReflectionMethod, ReflectionClass, getParams()
+
+### Community 110 - "Code Generation Helpers"
+Cohesion: 0.14
+Nodes (11): ModelGenerator, camelize(), counted(), decamelize(), is_pluralizable(), ordinal(), ordinalize(), pascalize() (+3 more)
+
+### Community 112 - "CORS Header Management"
+Cohesion: 0.23
+Nodes (5): Cors, IncomingRequest, RequestInterface, ResponseInterface, self
+
+### Community 116 - "Database Table Management"
 Cohesion: 0.15
 Nodes (3): Table, Connection, Forge
 
-### Community 98 - "Feature Testing Trait"
-Cohesion: 0.17
-Nodes (14): IncomingRequest, Request, call(), delete(), get(), options(), patch(), populateGlobals() (+6 more)
-
-### Community 99 - "Community 99"
-Cohesion: 0.31
-Nodes (3): BaseCell, CacheInterface, Cell
-
-### Community 103 - "Source Code Representation"
-Cohesion: 0.13
-Nodes (5): get_filenames(), ParameterHoldingTrait, SourceRepresentation, Closure, ContextInterface
-
-### Community 104 - "CORS Middleware"
-Cohesion: 0.25
-Nodes (5): Cors, IncomingRequest, RequestInterface, ResponseInterface, self
-
-### Community 105 - "Date Part Accessors"
+### Community 117 - "Database Testing Trait"
 Cohesion: 0.14
-Nodes (19): addCalendarMonths(), getDay(), getDayOfWeek(), getDayOfYear(), getHour(), getMinute(), getMonth(), getQuarter() (+11 more)
-
-### Community 109 - "Database Testing Trait"
-Cohesion: 0.15
 Nodes (10): clearInsertCache(), loadDependencies(), migrateDatabase(), regressDatabase(), runSeeds(), seed(), setUpDatabase(), setUpMigrate() (+2 more)
 
-### Community 110 - "Database Utility Base"
+### Community 119 - "Database Seeding"
+Cohesion: 0.15
+Nodes (5): Seeder, MainSeeder, ServiceSeeder, UserSeeder, Generator
+
+### Community 120 - "Feature Testing Trait"
+Cohesion: 0.19
+Nodes (14): FeatureTestTrait, IncomingRequest, Request, call(), delete(), get(), options(), patch() (+6 more)
+
+### Community 126 - "Data Type Casting"
+Cohesion: 0.11
+Nodes (7): BaseCast, ObjectCast, StringCast, DatetimeCast, FloatCast, IntegerCast, TimestampCast
+
+### Community 127 - "Session Handler Base"
+Cohesion: 0.12
+Nodes (3): BaseHandler, Closure, BaseHandler
+
+### Community 128 - "Database Utility Base"
 Cohesion: 0.15
 Nodes (7): BaseUtils, Utils, Utils, Utils, Utils, Utils, ConnectionInterface
 
-### Community 111 - "Renderer and Pager Integration"
-Cohesion: 0.12
-Nodes (5): render(), RendererInterface, PagerConfig, PagerConfig, AbstractValue
+### Community 129 - "Response Cache Management"
+Cohesion: 0.21
+Nodes (9): CacheConfig, CLIRequest, handle(), IncomingRequest, ResponseInterface, self, RequestInterface, ResponseInterface (+1 more)
 
-### Community 113 - "Database Seeding"
-Cohesion: 0.15
-Nodes (5): Database, Seed, Seeder, BaseConnection, Generator
+### Community 130 - "Core Service Proxies"
+Cohesion: 0.13
+Nodes (7): Images, Migrations, Security, CacheInterface, ConnectionInterface, RequestInterface, RouteCollectionInterface
 
-### Community 116 - "Text Manipulation Helpers"
-Cohesion: 0.12
-Nodes (3): _from_random(), highlight_phrase(), random_string()
+### Community 131 - "Toolbar Database Integration"
+Cohesion: 0.11
+Nodes (4): Toolbar, Database, Config, BaseConnection
 
-### Community 117 - "Kint Debugger Integration"
+### Community 132 - "Kint Debugger Entry"
 Cohesion: 0.20
 Nodes (3): Kint, Parser, RendererInterface
 
-### Community 121 - "Representation Interface"
+### Community 133 - "Value Representation Context"
 Cohesion: 0.16
 Nodes (3): ContextInterface, RepresentationInterface, AbstractValue
 
-### Community 126 - "Data Type Casting"
-Cohesion: 0.12
-Nodes (6): BaseCast, ObjectCast, StringCast, BooleanCast, CSVCast, IntegerCast
-
-### Community 127 - "Database Forge Base"
+### Community 137 - "Database Forge Base"
 Cohesion: 0.14
 Nodes (3): BaseForge, Forge, BaseConnection
 
-### Community 129 - "Base Controller Logic"
+### Community 139 - "Class Context Parsing"
 Cohesion: 0.14
-Nodes (6): BaseController, Home, RequestInterface, Controller, Closure, Generator
+Nodes (4): ClassConstContext, MethodContext, InstanceValue, ReflectionMethod
 
-### Community 130 - "Cookie Storage"
+### Community 140 - "Cookie Store Management"
 Cohesion: 0.18
 Nodes (5): Cookie, CookieStore, Countable, IteratorAggregate, Traversable
 
-### Community 133 - "HTTP Request Headers"
-Cohesion: 0.12
-Nodes (17): Accept, Accept-Encoding, Accept-Language, Cache-Control, Connection, Host, Sec-Fetch-Dest, Sec-Fetch-Mode (+9 more)
+### Community 143 - "Encryption Service"
+Cohesion: 0.14
+Nodes (3): EncrypterInterface, Encryption, BaseHandler
 
-### Community 135 - "APCu Cache Handler"
+### Community 145 - "APCu Cache Handler"
 Cohesion: 0.13
 Nodes (3): ApcuHandler, Cache, Closure
 
-### Community 138 - "Logging Interface"
-Cohesion: 0.18
-Nodes (14): AbstractLogger, alert(), critical(), debug(), emergency(), error(), info(), log() (+6 more)
+### Community 148 - "Text Manipulation Helpers"
+Cohesion: 0.12
+Nodes (3): _from_random(), random_string(), word_wrap()
 
-### Community 139 - "Data Parser"
-Cohesion: 0.37
-Nodes (4): Parser, AbstractValue, ContextInterface, ReflectionClass
-
-### Community 140 - "Resource and Stream Plugins"
+### Community 151 - "Resource and Stream Parsing"
 Cohesion: 0.14
 Nodes (5): StreamPlugin, AbstractValue, ContextInterface, ContextInterface, StreamValue
 
-### Community 142 - "Tabular Data Rendering"
-Cohesion: 0.18
-Nodes (10): BinaryPlugin, renderTab(), AbstractValue, RepresentationInterface, AbstractValue, RepresentationInterface, AbstractValue, RepresentationInterface (+2 more)
+### Community 153 - "Testing Logic Exceptions"
+Cohesion: 0.14
+Nodes (4): ArrayAccess, LogicException, TestException, mock()
 
-### Community 144 - "Response Caching"
-Cohesion: 0.23
-Nodes (6): CacheConfig, CLIRequest, IncomingRequest, ResponseInterface, self, App
-
-### Community 145 - "View Cell Components"
-Cohesion: 0.17
-Nodes (6): Cell, decamelize(), PropertiesTrait, class_basename(), self, fill()
-
-### Community 146 - "Model Generation Utility"
-Cohesion: 0.17
-Nodes (9): ModelGenerator, camelize(), counted(), is_pluralizable(), ordinal(), ordinalize(), pascalize(), plural() (+1 more)
-
-### Community 148 - "Microtime Debugging"
-Cohesion: 0.17
-Nodes (5): AbstractValue, AbstractValue, RepresentationInterface, AbstractValue, TextRenderer
-
-### Community 150 - "Parser Limit Plugins"
-Cohesion: 0.19
-Nodes (3): AbstractValue, ContextInterface, Parser
-
-### Community 151 - "Controller URI Mapping"
-Cohesion: 0.27
-Nodes (3): ReflectionMethod, ReflectionClass, getParams()
-
-### Community 152 - "Mock Query Builder"
-Cohesion: 0.16
+### Community 154 - "Mock Query Builder"
+Cohesion: 0.15
 Nodes (4): BaseBuilder, MockBuilder, Builder, Builder
 
-### Community 153 - "Service Factory"
-Cohesion: 0.16
-Nodes (7): Images, Migrations, Cache, CacheInterface, ConnectionInterface, RequestInterface, RouteCollectionInterface
+### Community 155 - "Array Casting"
+Cohesion: 0.12
+Nodes (4): CastInterface, ArrayCast, BaseCast, BaseCast
 
-### Community 154 - "Debug Toolbar Data"
-Cohesion: 0.13
-Nodes (14): CI_VERSION, collectors, isAJAX, method, segmentCount, segmentDuration, startTime, totalMemory (+6 more)
+### Community 156 - "Debug History Collection"
+Cohesion: 0.12
+Nodes (5): History, DateTime, static, FileHandler, TimeTrait
 
-### Community 156 - "Internationalization Exceptions"
+### Community 158 - "I18n Date Exceptions"
 Cohesion: 0.15
-Nodes (8): I18nException, createFromFormat(), getTimezoneName(), setHour(), setMinute(), setSecond(), setValue(), setYear()
+Nodes (9): I18nException, createFromFormat(), getTimezoneName(), setHour(), setMinute(), setMonth(), setSecond(), setValue() (+1 more)
 
-### Community 159 - "Class Method Plugins"
-Cohesion: 0.20
-Nodes (3): AbstractValue, AbstractValue, Parser
+### Community 161 - "Mock Session Handling"
+Cohesion: 0.17
+Nodes (7): MockSession, PersistsConnection, Session, getConnectionIdentifier(), getPersistentConnection(), hasPersistentConnection(), setPersistentConnection()
 
-### Community 160 - "XML and HTML Plugins"
-Cohesion: 0.21
-Nodes (5): HtmlPlugin, XmlPlugin, AbstractValue, AbstractValue, ContextInterface
+### Community 163 - "Logging and Autoload Config"
+Cohesion: 0.22
+Nodes (12): AbstractLogger, alert(), critical(), debug(), emergency(), error(), info(), log() (+4 more)
 
-### Community 161 - "SimpleXML Parsing"
-Cohesion: 0.30
-Nodes (5): AbstractValue, ClassMethodsPlugin, ContextInterface, Parser, SimpleXMLElement
+### Community 166 - "Filter and Performance Metrics"
+Cohesion: 0.22
+Nodes (8): after(), before(), RequestInterface, ResponseInterface, RequestInterface, ResponseInterface, RequestInterface, ResponseInterface
 
-### Community 163 - "Cache Persistence"
+### Community 170 - "Cache Interface Methods"
 Cohesion: 0.15
 Nodes (3): remember(), CacheInterface, Closure
 
-### Community 164 - "Event and Email Mocking"
+### Community 171 - "CLI Chatbot Service"
 Cohesion: 0.16
-Nodes (4): Email, Events, MockEvents, ContextInterface
+Nodes (5): ChatbotService, Groq, getEnv(), env(), is_windows()
 
-### Community 165 - "Mime Type Validation"
-Cohesion: 0.14
-Nodes (3): Mimes, StrictFileRules, RequestInterface
-
-### Community 168 - "Database Utility Functions"
+### Community 173 - "Database Backup Utilities"
 Cohesion: 0.15
 Nodes (3): BaseUtils, xml_convert(), ConnectionInterface
 
-### Community 171 - "File Information"
+### Community 174 - "File Metadata Management"
 Cohesion: 0.25
 Nodes (4): File, fromString(), FileSizeUnit, self
 
-### Community 172 - "Stream Filtering"
+### Community 175 - "Stream Filter Testing"
 Cohesion: 0.15
 Nodes (3): php_user_filter, setUpStreamFilterTrait(), tearDownStreamFilterTrait()
 
-### Community 174 - "Image Handler Interface"
+### Community 177 - "Image Handler Interface"
 Cohesion: 0.14
 Nodes (3): ImageHandlerInterface, clearMetadata(), static
 
-### Community 176 - "View Configuration"
-Cohesion: 0.17
-Nodes (8): View, BaseView, LoggerInterface, ViewConfig, FileLocatorInterface, LoggerInterface, ViewConfig, View
+### Community 181 - "Client History Service"
+Cohesion: 0.21
+Nodes (3): ClientHistoryService, ExampleDatabaseTest, DatabaseTestTrait
 
-### Community 177 - "Route Filter Attributes"
-Cohesion: 0.26
-Nodes (8): Filter, after(), before(), RouteAttributeInterface, RequestInterface, ResponseInterface, RequestInterface, ResponseInterface
+### Community 182 - "Class Constant Parsing"
+Cohesion: 0.31
+Nodes (5): ClassConstContext, ReflectionClassConstant, ReflectionProperty, AbstractValue, ReflectionClass
 
-### Community 178 - "Array Casting"
+### Community 184 - "Kint Parser Integration"
 Cohesion: 0.15
-Nodes (3): CastInterface, ArrayCast, BaseCast
+Nodes (6): Kint, ConstructablePluginInterface, ContextInterface, __construct(), Parser, TextRenderer
 
-### Community 181 - "Query Interface"
+### Community 186 - "Query Execution Interface"
 Cohesion: 0.19
 Nodes (6): setDuration(), setError(), setQuery(), swapPrefix(), QueryInterface, self
 
-### Community 185 - "Session Handler Logic"
+### Community 187 - "Exception Rendering"
+Cohesion: 0.27
+Nodes (4): ExceptionsConfig, RequestInterface, ResponseInterface, Throwable
+
+### Community 191 - "Honeypot Spam Protection"
+Cohesion: 0.19
+Nodes (4): Honeypot, RequestInterface, ResponseInterface, HoneypotConfig
+
+### Community 192 - "Session Handler Implementation"
 Cohesion: 0.19
 Nodes (6): setLogger(), LoggerAwareTrait, BaseHandler, SessionConfig, SessionHandlerInterface, LoggerInterface
 
-### Community 188 - "Function Reflection"
-Cohesion: 0.21
-Nodes (3): ReflectionFunctionAbstract, ContextInterface, FunctionValue
+### Community 194 - "Package Metadata"
+Cohesion: 0.18
+Nodes (12): author, bugs, url, description, homepage, keywords, license, main (+4 more)
 
-### Community 190 - "Trace and Lock Plugins"
-Cohesion: 0.21
-Nodes (6): LockPlugin, renderValue(), AbstractValue, AbstractValue, AbstractValue, AbstractValue
-
-### Community 193 - "Request Throttling"
+### Community 197 - "Request Throttling"
 Cohesion: 0.18
 Nodes (4): CacheInterface, self, Throttler, ThrottlerInterface
 
-### Community 197 - "Time and Timestamp Handling"
+### Community 199 - "File Locator Interface"
+Cohesion: 0.17
+Nodes (3): FileLocatorInterface, LoggerInterface, ViewConfig
+
+### Community 200 - "Community 200"
+Cohesion: 0.23
+Nodes (4): Cell, PropertiesTrait, self, fill()
+
+### Community 202 - "Community 202"
 Cohesion: 0.21
-Nodes (5): DateTimeImmutable, Time, static, AbstractValue, TimeTrait
+Nodes (7): RequestInterface, Closure, assertFilter(), assertHasFilters(), getFilterCaller(), getFiltersForRoute(), setUpFilterTestTrait()
 
-### Community 198 - "Base Exception Handling"
-Cohesion: 0.30
-Nodes (4): ExceptionsConfig, RequestInterface, ResponseInterface, Throwable
-
-### Community 199 - "Error and Log Handling"
+### Community 204 - "Community 204"
 Cohesion: 0.36
 Nodes (3): clean_path(), log_message(), render_backtrace()
 
-### Community 201 - "Community 201"
+### Community 206 - "Community 206"
 Cohesion: 0.35
 Nodes (4): FilterCollector, Filters, Request, Router
 
-### Community 203 - "Community 203"
-Cohesion: 0.21
-Nodes (7): PersistsConnection, getConnectionIdentifier(), getPersistentConnection(), hasPersistentConnection(), setPersistentConnection(), Cache, Cache
-
-### Community 207 - "Community 207"
-Cohesion: 0.20
-Nodes (11): App Index, Robots Exclusion Protocol, CodeIgniter 4 Framework, index.php, intl extension, json extension, libcurl extension, mbstring extension (+3 more)
-
-### Community 209 - "Community 209"
-Cohesion: 0.25
-Nodes (3): FactoriesCache, FileVarExportHandler, FileVarExportHandler
-
 ### Community 210 - "Community 210"
-Cohesion: 0.20
-Nodes (3): ViewException, decorateOutput(), ViewDecoratorTrait
+Cohesion: 0.17
+Nodes (3): PagerConfig, RendererInterface, URI
 
-### Community 212 - "Community 212"
+### Community 211 - "Community 211"
+Cohesion: 0.21
+Nodes (4): MicrotimePlugin, AbstractValue, AbstractValue, RepresentationInterface
+
+### Community 214 - "Community 214"
+Cohesion: 0.18
+Nodes (5): AdminController Documentation, AuthController Documentation, AuthService, ClientHistoryController Documentation, Controllers Reference Documentation
+
+### Community 215 - "Community 215"
+Cohesion: 0.22
+Nodes (3): Events, MockEvents, ContextInterface
+
+### Community 216 - "Community 216"
+Cohesion: 0.20
+Nodes (3): Logger, HandlerInterface, BaseHandler
+
+### Community 219 - "Community 219"
+Cohesion: 0.29
+Nodes (4): Database, BaseUtils, ConnectionInterface, Forge
+
+### Community 220 - "Community 220"
 Cohesion: 0.20
 Nodes (3): RawSql, Stringable, self
 
-### Community 217 - "Community 217"
+### Community 226 - "Community 226"
 Cohesion: 0.47
 Nodes (11): alert(), critical(), debug(), emergency(), error(), info(), log(), notice() (+3 more)
 
-### Community 220 - "Community 220"
-Cohesion: 0.24
-Nodes (9): setParser(), PluginInterface, __construct(), Parser, RichRenderer, AbstractValue, TextRenderer, __construct() (+1 more)
+### Community 229 - "Community 229"
+Cohesion: 0.25
+Nodes (6): setParser(), PluginInterface, AbstractPlugin, Parser, AbstractValue, RichRenderer
 
-### Community 221 - "Community 221"
+### Community 230 - "Community 230"
+Cohesion: 0.27
+Nodes (5): ProfilePlugin, AbstractValue, ContextInterface, AbstractValue, RepresentationInterface
+
+### Community 232 - "Community 232"
 Cohesion: 0.40
 Nodes (3): parse_subdomain(), RequestInterface, ResponseInterface
 
-### Community 223 - "Community 223"
-Cohesion: 0.22
-Nodes (5): Cache, Logger, Session, FileHandler, MockFileLogger
-
-### Community 225 - "Community 225"
-Cohesion: 0.20
-Nodes (3): Kint, ContextInterface, TextRenderer
-
-### Community 231 - "Community 231"
-Cohesion: 0.33
-Nodes (4): Database, BaseUtils, ConnectionInterface, Forge
-
-### Community 232 - "Community 232"
-Cohesion: 0.22
-Nodes (3): Migration, ExampleMigration, Forge
-
 ### Community 236 - "Community 236"
-Cohesion: 0.27
-Nodes (4): CSRF, Security, RequestInterface, ResponseInterface
+Cohesion: 0.22
+Nodes (3): Migration, CreateClientProfilesTable, Forge
 
 ### Community 237 - "Community 237"
 Cohesion: 0.22
-Nodes (6): HotReloader, create(), setMonth(), today(), tomorrow(), yesterday()
+Nodes (3): setUpControllerTestTrait(), withRequest(), withUri()
 
-### Community 239 - "Community 239"
+### Community 242 - "Community 242"
 Cohesion: 0.27
 Nodes (4): Logger, MockLogger, Stringable, TestLogger
 
-### Community 241 - "Community 241"
-Cohesion: 0.31
-Nodes (4): AbstractValue, ContextInterface, AbstractValue, RepresentationInterface
-
 ### Community 243 - "Community 243"
+Cohesion: 0.29
+Nodes (4): AbstractValue, ClassMethodsPlugin, ClassStaticsPlugin, Parser
+
+### Community 245 - "Community 245"
+Cohesion: 0.27
+Nodes (5): LockPlugin, renderValue(), AbstractValue, AbstractValue, AbstractValue
+
+### Community 246 - "Community 246"
 Cohesion: 0.33
 Nodes (3): FilterFinder, Filters, Router
 
-### Community 245 - "Community 245"
-Cohesion: 0.22
-Nodes (3): setUpControllerTestTrait(), withRequest(), withUri()
-
-### Community 246 - "Community 246"
-Cohesion: 0.36
-Nodes (6): Throwable, Exceptions, handle(), RequestInterface, ResponseInterface, Throwable
-
-### Community 247 - "Community 247"
-Cohesion: 0.25
-Nodes (3): getEnv(), env(), is_windows()
-
 ### Community 249 - "Community 249"
+Cohesion: 0.25
+Nodes (6): View, BaseView, FileLocatorInterface, LoggerInterface, ViewConfig, View
+
+### Community 250 - "Community 250"
 Cohesion: 0.39
 Nodes (4): CorsService, Cors, RequestInterface, ResponseInterface
-
-### Community 251 - "Community 251"
-Cohesion: 0.22
-Nodes (9): config, baseURL, ciVersion, cspEnabled, environment, locale, phpSAPI, phpVersion (+1 more)
 
 ### Community 253 - "Community 253"
 Cohesion: 0.28
 Nodes (6): base_url(), getResponse(), ResponsableInterface, ResponseInterface, Throwable, ResponseInterface
 
-### Community 262 - "Community 262"
+### Community 257 - "Community 257"
+Cohesion: 0.31
+Nodes (4): TablePlugin, AbstractValue, AbstractValue, RepresentationInterface
+
+### Community 259 - "Community 259"
 Cohesion: 0.25
 Nodes (4): __construct(), RouterInterface, Request, RouteCollectionInterface
 
-### Community 263 - "Community 263"
-Cohesion: 0.31
-Nodes (5): ControllerFinder, FileLocatorInterface, LoggerInterface, RequestInterface, ResponseInterface
-
-### Community 266 - "Community 266"
-Cohesion: 0.29
-Nodes (4): Routing, BaseRouting, Routing, Routes
-
-### Community 267 - "Community 267"
+### Community 264 - "Community 264"
 Cohesion: 0.50
 Nodes (3): Cache, RequestInterface, ResponseInterface
 
-### Community 269 - "Community 269"
+### Community 265 - "Community 265"
+Cohesion: 0.39
+Nodes (3): Filter, RequestInterface, ResponseInterface
+
+### Community 266 - "Community 266"
 Cohesion: 0.25
 Nodes (7): description, homepage, license, name, scripts, test, type
 
-### Community 270 - "Community 270"
+### Community 267 - "Community 267"
+Cohesion: 0.25
+Nodes (8): require, cloudinary/cloudinary_php, ext-intl, ext-mbstring, laminas/laminas-escaper, lucianotonet/groq-php, php, psr/log
+
+### Community 268 - "Community 268"
 Cohesion: 0.25
 Nodes (8): require-dev, codeigniter/coding-standard, fakerphp/faker, friendsofphp/php-cs-fixer, mikey179/vfsstream, nexusphp/cs-config, phpunit/phpunit, predis/predis
 
+### Community 269 - "Community 269"
+Cohesion: 0.29
+Nodes (4): Cache, Session, FileHandler, MockFileLogger
+
 ### Community 272 - "Community 272"
-Cohesion: 0.32
-Nodes (3): MethodContext, InstanceValue, ReflectionMethod
+Cohesion: 0.25
+Nodes (3): HotReloader, MigrationsConfig, db_connect()
+
+### Community 274 - "Community 274"
+Cohesion: 0.36
+Nodes (3): DataConverter, DataConverter, DataCaster
 
 ### Community 275 - "Community 275"
 Cohesion: 0.36
-Nodes (3): DataConverter, DataConverter, DataCaster
+Nodes (3): DateTimeImmutable, Time, AbstractValue
+
+### Community 276 - "Community 276"
+Cohesion: 0.54
+Nodes (3): RequestInterface, ResponseInterface, Throwable
 
 ### Community 278 - "Community 278"
 Cohesion: 0.32
 Nodes (4): FacadeInterface, __construct(), Parser, RendererInterface
 
 ### Community 279 - "Community 279"
-Cohesion: 0.43
-Nodes (3): InvalidChars, RequestInterface, ResponseInterface
-
-### Community 280 - "Community 280"
 Cohesion: 0.39
 Nodes (4): Cache, RequestInterface, ResponseCache, ResponseInterface
 
 ### Community 283 - "Community 283"
-Cohesion: 0.36
-Nodes (3): AbstractValue, AbstractValue, RepresentationInterface
+Cohesion: 0.32
+Nodes (4): Request, RequestInterface, ResponseInterface, RouteCollectionInterface
 
 ### Community 285 - "Community 285"
-Cohesion: 0.32
-Nodes (4): SimpleXMLElementValue, ContextInterface, SimpleXMLElement, SimpleXMLElementValue
-
-### Community 286 - "Community 286"
 Cohesion: 0.36
 Nodes (3): ContextInterface, UnitEnum, EnumValue
 
-### Community 296 - "Community 296"
-Cohesion: 0.43
-Nodes (3): Modules, RequestInterface, ResponseInterface
-
-### Community 298 - "Community 298"
+### Community 294 - "Community 294"
 Cohesion: 0.43
 Nodes (3): Honeypot, RequestInterface, ResponseInterface
 
-### Community 303 - "Community 303"
-Cohesion: 0.43
-Nodes (6): Closure, assertFilter(), assertHasFilters(), getFilterCaller(), getFiltersForRoute(), setUpFilterTestTrait()
+### Community 299 - "Community 299"
+Cohesion: 0.47
+Nodes (4): ResponseInterface, Chatbot Integration for Appointment System, ChatbotController, BaseController
 
-### Community 309 - "Community 309"
-Cohesion: 0.33
-Nodes (6): require, ext-intl, ext-mbstring, laminas/laminas-escaper, php, psr/log
+### Community 307 - "Community 307"
+Cohesion: 0.53
+Nodes (3): CSRF, RequestInterface, ResponseInterface
 
-### Community 314 - "Community 314"
+### Community 308 - "Community 308"
 Cohesion: 0.53
 Nodes (3): DebugToolbar, RequestInterface, ResponseInterface
 
-### Community 315 - "Community 315"
-Cohesion: 0.53
-Nodes (3): Honeypot, RequestInterface, ResponseInterface
-
-### Community 318 - "Community 318"
+### Community 311 - "Community 311"
 Cohesion: 0.53
 Nodes (3): IteratorFilter, RecursiveFilterIterator, RecursiveIterator
 
-### Community 319 - "Community 319"
+### Community 312 - "Community 312"
 Cohesion: 0.53
 Nodes (4): getFirstChildWithTagName(), getHash(), init(), showTab()
 
-### Community 321 - "Community 321"
+### Community 315 - "Community 315"
+Cohesion: 0.33
+Nodes (6): directories, doc, scripts, build:css, test, watch:css
+
+### Community 316 - "Community 316"
 Cohesion: 0.60
 Nodes (3): LoggerInterface, RequestInterface, ResponseInterface
 
-### Community 322 - "Community 322"
+### Community 318 - "Community 318"
+Cohesion: 0.47
+Nodes (3): BackedEnum, EnumCast, UnitEnum
+
+### Community 320 - "Community 320"
+Cohesion: 0.47
+Nodes (3): BackedEnum, EnumCast, UnitEnum
+
+### Community 321 - "Community 321"
 Cohesion: 0.53
-Nodes (3): ColorPlugin, AbstractValue, RepresentationInterface
+Nodes (3): AbstractValue, TextRenderer, AbstractPlugin
 
-### Community 323 - "Community 323"
+### Community 322 - "Community 322"
 Cohesion: 0.47
-Nodes (3): BackedEnum, EnumCast, UnitEnum
+Nodes (3): AbstractValue, TextRenderer, MicrotimePlugin
 
-### Community 324 - "Community 324"
-Cohesion: 0.47
-Nodes (3): BackedEnum, EnumCast, UnitEnum
+### Community 326 - "Community 326"
+Cohesion: 0.80
+Nodes (5): after(), before(), RouteAttributeInterface, RequestInterface, ResponseInterface
 
-### Community 327 - "Community 327"
-Cohesion: 0.33
-Nodes (6): Cache Index, Debugbar Index, Writable Index, Logs Index, Session Index, Uploads Index
-
-### Community 332 - "Community 332"
+### Community 331 - "Community 331"
 Cohesion: 0.50
 Nodes (4): ConditionalTrait, self, when(), whenNot()
 
-### Community 336 - "Community 336"
-Cohesion: 0.70
-Nodes (4): after(), before(), RequestInterface, ResponseInterface
+### Community 341 - "Community 341"
+Cohesion: 0.60
+Nodes (4): AbstractValue, TextRenderer, __construct(), render()
 
-### Community 343 - "Serialization Plugins"
-Cohesion: 0.14
-Nodes (6): parseComplete(), PluginCompleteInterface, AbstractValue, AbstractValue, AbstractValue, AbstractValue
-
-### Community 347 - "Community 347"
-Cohesion: 0.50
-Nodes (5): CodeIgniter\Test\CIUnitTestCase, Composer, PHPUnit, Running Application Tests, XDebug
-
-### Community 352 - "Community 352"
+### Community 346 - "Community 346"
 Cohesion: 0.50
 Nodes (4): autoload, exclude-from-classmap, psr-4, CodeIgniter\\
 
-### Community 353 - "Community 353"
+### Community 347 - "Community 347"
 Cohesion: 0.50
 Nodes (4): config, optimize-autoloader, preferred-install, sort-packages
 
-### Community 354 - "Community 354"
+### Community 348 - "Community 348"
 Cohesion: 0.50
 Nodes (4): support, forum, slack, source
 
+### Community 367 - "Community 367"
+Cohesion: 0.50
+Nodes (4): devDependencies, autoprefixer, postcss, tailwindcss
+
+### Community 382 - "Community 382"
+Cohesion: 0.67
+Nodes (3): APPOINTMENTS Table, Models Reference Documentation, USERS Table
+
 ## Knowledge Gaps
-- **218 isolated node(s):** `DocTypes`, `Kint`, `Optimize`, `Paths`, `name` (+213 more)
+- **160 isolated node(s):** `DocTypes`, `Kint`, `Optimize`, `Paths`, `Groq` (+155 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **213 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **206 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `service()` connect `Routing and Cookies` to `HTTP Message Headers`, `Base Controller Logic`, `Route Collection Management`, `API Exception Handling`, `Base Model Operations`, `Community 263`, `Framework Bootstrapping`, `CLI Cache Commands`, `Community 267`, `Security and CSRF`, `App Console Runner`, `Community 266`, `Code Generation Utilities`, `Request Router`, `Helper and Number Utilities`, `File System Collection`, `Community 280`, `Session Management`, `HTTP Response Testing`, `App Environment Config`, `Database Migration Runner`, `Exception Handler Logic`, `Community 290`, `Community 291`, `Response Cookie Trait`, `Mime Type Validation`, `HTML Form Helpers`, `Incoming Request Data`, `Community 296`, `CLI Signal Handling`, `Language Localization`, `Community 295`, `System Logger`, `Framework Entry Points`, `Community 303`, `URL and Link Helpers`, `Community 304`, `Community 308`, `HTML and Media Helpers`, `Event Dispatcher`, `View Configuration`, `File Download Response`, `Community 314`, `Community 315`, `Community 316`, `Community 317`, `File Publisher System`, `Database Debug Toolbar`, `Error and Log Handling`, `Community 201`, `User Agent Detection`, `Community 337`, `Community 340`, `Pagination Logic`, `Class Autoloader`, `Community 221`, `Community 349`, `Feature Testing Trait`, `Community 99`, `Model Validation Logic`, `Component Instance Factory`, `Community 233`, `Unit Testing Helpers`, `Community 236`, `Database Testing Trait`, `Community 367`, `Community 368`, `Community 243`, `Community 245`, `View Rendering System`, `Community 376`, `Community 249`, `Validation Engine`, `Community 252`, `Community 253`?**
-  _High betweenness centrality (0.142) - this node is a cross-community bridge._
-- **Why does `BaseBuilder` connect `Query Builder Core` to `Community 227`, `Community 228`, `Table Name Parsing`, `Subquery Builder`, `Community 358`, `Write Query Builder`, `Community 332`, `Select Statement Builder`?**
-  _High betweenness centrality (0.057) - this node is a cross-community bridge._
-- **Why does `LogicException` connect `Community 277` to `Community 326`, `DOM Parsing Plugins`, `Community 397`, `Community 206`, `Autoload and Exceptions`, `Security and CSRF`, `View Cell Components`, `Database Mocking`, `Response Caching`, `Community 313`, `Community 253`, `Community 255`?**
-  _High betweenness centrality (0.056) - this node is a cross-community bridge._
+- **Why does `service()` connect `Cookie and HTTPS Management` to `HTTP Message Handling`, `Community 385`, `Cookie Security Validation`, `Framework Bootstrapping`, `CLI Cache Commands`, `Community 262`, `Validation Logic`, `Community 264`, `Base Model Functionality`, `Route Collection Management`, `Exception Interfaces`, `File and Class Generation`, `Application Configuration`, `Autoloading and Booting`, `Request Filter Management`, `Console and Request Config`, `Database Migration Runner`, `Community 279`, `Community 280`, `Community 283`, `HTTP Response Trait`, `Number and Text Helpers`, `Factory Instance Caching`, `Community 288`, `Community 289`, `Model Persistence Logic`, `Session Management`, `Language Translation Service`, `HTTP Response Testing`, `Filter and Performance Metrics`, `Process Signal Handling`, `Community 298`, `HTML Tag Helpers`, `Form UI Helpers`, `Community 303`, `URL and Link Helpers`, `System Logger`, `Community 307`, `Community 308`, `Community 309`, `Community 310`, `Incoming HTTP Request`, `File Publishing Utilities`, `Community 313`, `File Download Response`, `View Rendering and Paging`, `Event Dispatcher`, `Honeypot Spam Protection`, `Debug Toolbar Collection`, `Community 330`, `Community 202`, `Community 204`, `Community 206`, `API Response Trait`, `System Exception Handler`, `Community 343`, `User Agent Detection`, `Unit Testing Helpers`, `Community 222`, `Route and Filter Collection`, `View Cell Components`, `Controller Discovery`, `Pagination Logic`, `Community 232`, `Namespace Autoloader`, `Community 237`, `Community 239`, `Database Testing Trait`, `Community 246`, `Feature Testing Trait`, `Community 249`, `Community 250`, `Community 253`?**
+  _High betweenness centrality (0.155) - this node is a cross-community bridge._
+- **Why does `LogicException` connect `Testing Logic Exceptions` to `Cookie Security Validation`, `Framework Bootstrapping`, `Community 323`, `DOM Node Parsing`, `Community 200`, `Exception Interfaces`, `Database Mocking Utilities`, `Community 213`, `CLI Stream Mocking`, `Community 253`?**
+  _High betweenness centrality (0.045) - this node is a cross-community bridge._
+- **Why does `stdClass` connect `Database Mocking Utilities` to `Community 256`, `Response Cache Management`, `Database Model Operations`, `Community 260`, `Database Result Interface`, `Mock Database Connection`, `Community 244`, `Database Table Management`, `Community 374`, `Database Migration Runner`, `Community 247`, `Community 254`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
 - **Are the 152 inferred relationships involving `service()` (e.g. with `format()` and `.before()`) actually correct?**
   _`service()` has 152 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `DocTypes`, `Kint`, `Optimize` to the rest of the system?**
-  _218 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Routing and Cookies` be split into smaller, more focused modules?**
-  _Cohesion score 0.06284153005464481 - nodes in this community are weakly interconnected._
-- **Should `HTTP Message Headers` be split into smaller, more focused modules?**
+  _160 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `HTTP Message Handling` be split into smaller, more focused modules?**
+  _Cohesion score 0.05878084179970972 - nodes in this community are weakly interconnected._
+- **Should `Cookie Security Validation` be split into smaller, more focused modules?**
   _Cohesion score 0.06274509803921569 - nodes in this community are weakly interconnected._
