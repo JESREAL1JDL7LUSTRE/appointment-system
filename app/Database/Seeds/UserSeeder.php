@@ -46,11 +46,11 @@ class UserSeeder extends Seeder
         // 3. Seed Staff Members
         for ($i = 0; $i < 5; $i++) {
             $staffData = [
-                'email'         => clone $faker->unique()->safeEmail(),
+                'email'         => $faker->unique()->safeEmail(),
                 'password_hash' => password_hash('staff123', PASSWORD_DEFAULT),
-                'first_name'    => clone $faker->firstName(),
-                'last_name'     => clone $faker->lastName(),
-                'phone'         => clone $faker->phoneNumber(),
+                'first_name'    => $faker->firstName(),
+                'last_name'     => $faker->lastName(),
+                'phone'         => $faker->phoneNumber(),
                 'is_active'     => 1,
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s'),
@@ -67,8 +67,8 @@ class UserSeeder extends Seeder
             // Create Staff Profile
             $this->db->table('staff_profiles')->insert([
                 'user_id'      => $staffId,
-                'title'        => clone $faker->jobTitle(),
-                'bio'          => clone $faker->paragraph(),
+                'title'        => $faker->jobTitle(),
+                'bio'          => $faker->paragraph(),
                 'is_available' => 1,
             ]);
         }
@@ -76,11 +76,11 @@ class UserSeeder extends Seeder
         // 4. Seed Clients
         for ($i = 0; $i < 20; $i++) {
             $clientData = [
-                'email'         => clone $faker->unique()->safeEmail(),
+                'email'         => $faker->unique()->safeEmail(),
                 'password_hash' => password_hash('client123', PASSWORD_DEFAULT),
-                'first_name'    => clone $faker->firstName(),
-                'last_name'     => clone $faker->lastName(),
-                'phone'         => clone $faker->phoneNumber(),
+                'first_name'    => $faker->firstName(),
+                'last_name'     => $faker->lastName(),
+                'phone'         => $faker->phoneNumber(),
                 'is_active'     => 1,
                 'created_at'    => date('Y-m-d H:i:s'),
                 'updated_at'    => date('Y-m-d H:i:s'),
@@ -97,7 +97,7 @@ class UserSeeder extends Seeder
             // Create Client Profile
             $this->db->table('client_profiles')->insert([
                 'user_id'        => $clientId,
-                'internal_notes' => 'New client. ' . clone $faker->sentence(),
+                'internal_notes' => 'New client. ' . $faker->sentence(),
             ]);
         }
     }
