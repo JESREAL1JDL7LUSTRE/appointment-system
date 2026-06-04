@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@theme {
+  --color-primary: #1e293b;
+  --color-primary-hover: #334155;
+  --color-accent: #b4975a; /* Classic warm gold/brass */
+  --color-accent-hover: #9c8046;
+  
+  --font-sans: 'Lora', serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-stone-50);
+    color: var(--color-stone-800);
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+  }
+}

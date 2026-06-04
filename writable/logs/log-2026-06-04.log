@@ -122,3 +122,65 @@ Stack trace:
 #12 E:\OJT\brox\appointment-system\system\Boot.php(166): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
 #13 E:\OJT\brox\appointment-system\spark(87): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
 #14 {main}
+CRITICAL - 2026-06-04 06:11:30 --> ErrorException: Undefined array key "end_time"
+[Method: GET, Route: ui/admin]
+in APPPATH/Views/admin/dashboard.php on line 93.
+ 1 APPPATH/Views/admin/dashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "end_time"', '/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php', 93)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH/Controllers/UiPreview.php(38): view('admin/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\UiPreview->adminDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UiPreview))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/macbookpro/Desktop/CS/Projects/appointment-system/public/index.php')
+CRITICAL - 2026-06-04 06:11:30 --> ErrorException: Undefined array key "end_time"
+[Method: GET, Route: ui/admin]
+in APPPATH/Views/admin/dashboard.php on line 93.
+ 1 APPPATH/Views/admin/dashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "end_time"', '/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php', 93)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH/Controllers/UiPreview.php(38): view('admin/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\UiPreview->adminDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UiPreview))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/macbookpro/Desktop/CS/Projects/appointment-system/public/index.php')
+CRITICAL - 2026-06-04 06:11:31 --> ErrorException: Undefined array key "end_time"
+[Method: GET, Route: ui/admin]
+in APPPATH/Views/admin/dashboard.php on line 93.
+ 1 APPPATH/Views/admin/dashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "end_time"', '/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php', 93)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH/Controllers/UiPreview.php(38): view('admin/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\UiPreview->adminDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UiPreview))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/macbookpro/Desktop/CS/Projects/appointment-system/public/index.php')
+CRITICAL - 2026-06-04 06:11:31 --> ErrorException: Undefined array key "end_time"
+[Method: GET, Route: ui/admin]
+in APPPATH/Views/admin/dashboard.php on line 93.
+ 1 APPPATH/Views/admin/dashboard.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "end_time"', '/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php', 93)
+ 2 SYSTEMPATH/View/View.php(240): include('/Users/macbookpro/Desktop/CS/Projects/appointment-system/app/Views/admin/dashboard.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render('admin/dashboard', [], true)
+ 5 APPPATH/Controllers/UiPreview.php(38): view('admin/dashboard', [...])
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\UiPreview->adminDashboard()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UiPreview))
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH/rewrite.php(44): require_once('/Users/macbookpro/Desktop/CS/Projects/appointment-system/public/index.php')
+DEBUG - 2026-06-04 06:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-06-04 06:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
