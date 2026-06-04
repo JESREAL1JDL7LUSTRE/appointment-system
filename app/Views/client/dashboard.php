@@ -705,7 +705,7 @@
         function clientPortal() {
             return {
                 // SPA Navigation
-                activeTab: 'home',
+                activeTab: ['home', 'book', 'bookings', 'profile'].includes(window.location.hash.substring(1)) ? window.location.hash.substring(1) : 'home',
                 toasts: [],
                 toastId: 0,
                 
@@ -749,6 +749,17 @@
                 bookingFilter: 'all',
 
                 init() {
+                    // Watch for browser back/forward buttons
+                    window.addEventListener('hashchange', () => {
+                        const hash = window.location.hash.substring(1);
+                        if (['home', 'book', 'bookings', 'profile'].includes(hash)) {
+                            if (this.activeTab !== hash) {
+                                this.activeTab = hash;
+                                if (hash !== 'book') this.resetWizard();
+                            }
+                        }
+                    });
+
                     // Min Date for date picker
                     const today = new Date();
                     const yyyy = today.getFullYear();
@@ -778,6 +789,7 @@
 
                 setTab(tab) {
                     this.activeTab = tab;
+                    window.location.hash = tab;
                     // Reset wizard on changing tab away from book
                     if(tab !== 'book') {
                         this.resetWizard();
