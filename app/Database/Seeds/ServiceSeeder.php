@@ -3,14 +3,11 @@
 namespace App\Database\Seeds;
 
 use CodeIgniter\Database\Seeder;
-use Faker\Factory;
 
 class ServiceSeeder extends Seeder
 {
     public function run()
     {
-        $faker = Factory::create();
-
         // 1. Seed Services
         $services = [
             [
