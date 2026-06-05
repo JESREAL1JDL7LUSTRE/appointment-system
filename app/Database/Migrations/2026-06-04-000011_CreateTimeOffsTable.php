@@ -11,14 +11,10 @@ class CreateTimeOffsTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'BIGINT',
-                'constraint'     => 20,
-                'unsigned'       => true,
                 'auto_increment' => true,
             ],
             'staff_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'start_datetime' => [
                 'type' => 'DATETIME',
@@ -32,8 +28,8 @@ class CreateTimeOffsTable extends Migration
                 'null'       => true,
             ],
             'status' => [
-                'type'       => 'ENUM',
-                'constraint' => ['pending', 'approved', 'rejected'],
+                'type'       => 'VARCHAR',
+                'constraint' => '20',
                 'default'    => 'pending',
             ],
         ]);

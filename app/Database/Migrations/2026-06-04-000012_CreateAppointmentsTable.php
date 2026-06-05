@@ -11,24 +11,16 @@ class CreateAppointmentsTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'BIGINT',
-                'constraint'     => 20,
-                'unsigned'       => true,
                 'auto_increment' => true,
             ],
             'client_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'staff_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'service_id' => [
-                'type'       => 'INT',
-                'constraint' => 11,
-                'unsigned'   => true,
+                'type' => 'INT',
             ],
             'appointment_date' => [
                 'type' => 'DATE',
@@ -40,8 +32,8 @@ class CreateAppointmentsTable extends Migration
                 'type' => 'TIME',
             ],
             'status' => [
-                'type'       => 'ENUM',
-                'constraint' => ['pending', 'confirmed', 'completed', 'cancelled', 'no_show'],
+                'type'       => 'VARCHAR',
+                'constraint' => '20',
                 'default'    => 'pending',
             ],
             'client_notes' => [

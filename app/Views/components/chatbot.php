@@ -1,5 +1,5 @@
 <!-- ====== Floating Chatbot Widget ====== -->
-<div id="chatbot-widget" style="position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+<div id="chatbot-widget" style="position:fixed;bottom:24px;right:24px;z-index:40;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
 
     <!-- Chat Popup -->
     <div id="chatbot-box" style="display:none;width:340px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.18);overflow:hidden;flex-direction:column;border:1px solid #e5e7eb;">

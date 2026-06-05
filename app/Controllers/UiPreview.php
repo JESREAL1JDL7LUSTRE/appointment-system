@@ -126,7 +126,6 @@ class UiPreview extends BaseController
     // Staff Views
     public function staffDashboard()
     {
-        session()->set('user_first_name', 'Sarah');
         $data = [
             'stats' => [
                 'today_appointments' => 5,

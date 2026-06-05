@@ -10,9 +10,7 @@ class CreateStaffProfilesTable extends Migration
     {
         $this->forge->addField([
             'user_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'title' => [
                 'type'       => 'VARCHAR',
@@ -24,9 +22,8 @@ class CreateStaffProfilesTable extends Migration
                 'null' => true,
             ],
             'is_available' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'default'    => 1,
+                'type'    => 'SMALLINT',
+                'default' => 1,
             ],
         ]);
         $this->forge->addKey('user_id', true);

@@ -1,61 +1,70 @@
-# CodeIgniter 4 Framework
+# OmniSchedule (Client Appointment Management System)
 
-## What is CodeIgniter?
+Welcome to the documentation for **OmniSchedule**, a comprehensive, scalable, and beautifully designed client appointment management system.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Project Overview
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+OmniSchedule is a web-based application designed to streamline the scheduling and management of appointments between clients and service providers. It is highly adaptable for various industries such as medical clinics, spas, consultation businesses, and more. 
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+The primary goal of the application is to provide an efficient and user-friendly platform for booking appointments while reducing scheduling conflicts and administrative workload. 
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+## Key Technology Stack
 
-## Important Change with index.php
+The project uses a modern monolithic stack divided between a robust PHP backend and a reactive, utility-driven frontend:
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+*   **Backend Framework**: [CodeIgniter 4](https://codeigniter.com/) (CI4) - Follows the MVC architecture.
+*   **Frontend Logic**: [Alpine.js](https://alpinejs.dev/) - Provides lightweight reactivity and SPA-like interactions without the overhead of Vue/React.
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework used for rapid, beautiful, and consistent UI design.
+*   **Database**: MySQL / MariaDB - Relational data mapping.
+*   **Icons**: [Phosphor Icons](https://phosphoricons.com/)
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Documentation Structure
 
-**Please** read the user guide for a better explanation of how CI4 works!
+This `docs` directory contains detailed information for developers aiming to maintain or extend the system:
 
-## Repository Management
+1.  **[Features & Workflows](features.md)**: A detailed breakdown of the capabilities available to Clients, Staff, and Administrators.
+2.  **[System Architecture](architecture.md)**: How the frontend and backend interact, security models, and code organization.
+3.  **[Database Schema](database.md)**: The Enhanced Entity-Relationship Diagram (EERD) and logic for preventing scheduling overlaps.
+4.  **[API Reference](api_reference.md)**: Details of the internal AJAX endpoints powering the application interfaces.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+## Getting Started
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+### Prerequisites
+*   PHP 8.1+
+*   Composer
+*   MySQL / MariaDB
+*   Node.js and npm (for Tailwind CSS compilation)
 
-## Contributing
+### Installation
+1.  **Clone the Repository**: Clone the project to your local server (e.g., XAMPP, Laragon, or standalone PHP server).
+2.  **Install Dependencies**: 
+    ```bash
+    composer install
+    npm install
+    ```
+3.  **Database Setup**: 
+    *   Create a local database (e.g., `appointment_system`).
+    *   Copy `env` to `.env` and configure your database credentials.
+    *   Run migrations and seeders:
+        ```bash
+        php spark migrate
+        php spark db:seed MainSeeder
+        ```
+4.  **Tailwind Compilation**:
+    If you make changes to the `.php` views and need to compile CSS:
+    ```bash
+    npm run build
+    # or for watch mode
+    npm run dev
+    ```
+5.  **Run Application**:
+    ```bash
+    php spark serve
+    ```
+    Access the application at `http://localhost:8080`.
 
-We welcome contributions from the community.
+## Design Philosophy
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 8.2 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+*   **Secure by Default**: All sensitive routes are protected by CodeIgniter Route Filters enforcing Role-Based Access Control (RBAC).
+*   **Reactive UI, Monolithic Core**: We use Alpine.js inside traditional CI4 views. This allows us to have dynamic modals, tab-routing, and smart form wizards without needing a fully separate Next.js/React frontend.
+*   **Data Integrity**: Time-overlaps are prevented at the database query level by strictly checking existing appointments and staff working hours/time-offs.

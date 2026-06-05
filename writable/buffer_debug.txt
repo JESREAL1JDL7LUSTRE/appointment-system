@@ -1,0 +1,3 @@
+Buffer content length: 2
+Hex content: '0d0a'
+Raw content: 

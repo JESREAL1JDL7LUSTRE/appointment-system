@@ -10,14 +10,10 @@ class CreateRolePermissionsTable extends Migration
     {
         $this->forge->addField([
             'role_id' => [
-                'type'       => 'INT',
-                'constraint' => 11,
-                'unsigned'   => true,
+                'type' => 'INT',
             ],
             'permission_id' => [
-                'type'       => 'INT',
-                'constraint' => 11,
-                'unsigned'   => true,
+                'type' => 'INT',
             ],
         ]);
         $this->forge->addKey(['role_id', 'permission_id'], true);

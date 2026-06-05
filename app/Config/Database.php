@@ -49,6 +49,9 @@ class Database extends Config
             'datetime' => 'Y-m-d H:i:s',
             'time'     => 'H:i:s',
         ],
+        // PostgreSQL specific settings (mapped by DotEnv if they exist in this array)
+        'sslmode'      => '',
+        'options'      => '',
     ];
 
     //    /**

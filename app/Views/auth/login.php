@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA - Client Portal Authentication</title>
+    <title>OmniSchedule - Authentication</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?= base_url('image/logo-icon-only.png') ?>">
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
@@ -57,11 +59,8 @@
             
             <div class="relative z-10 space-y-8">
                 <!-- Logo -->
-                <a href="<?= base_url('/') ?>" class="flex items-center gap-2 w-fit">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
-                        <i class="ph-bold ph-sparkle text-amber-400 text-2xl"></i>
-                    </div>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-amber-400">AURA</span>
+                <a href="<?= base_url('/') ?>" class="flex items-center gap-2 w-fit mb-8">
+                    <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-10 w-auto">
                 </a>
                 
                 <div class="space-y-4">
@@ -96,7 +95,7 @@
                     <button @click="activeTab = 'login'" 
                             :class="activeTab === 'login' ? 'border-amber-600 text-stone-900 font-bold border-b-2' : 'text-stone-400 font-semibold hover:text-stone-700'"
                             class="pb-3 text-base transition-all focus:outline-none">
-                        Client Login
+                        Portal Login
                     </button>
                     <button @click="activeTab = 'register'" 
                             :class="activeTab === 'register' ? 'border-amber-600 text-stone-900 font-bold border-b-2' : 'text-stone-400 font-semibold hover:text-stone-700'"
@@ -180,22 +179,41 @@
             </div>
 
             <!-- DEMO LOGINS PANEL (For ease of OJT Testing / Evaluation) -->
-            <?php if (!empty($clients)): ?>
+            <?php if (ENVIRONMENT === 'development' && (!empty($clients) || !empty($staffs))): ?>
                 <div class="border-t border-stone-200 mt-10 pt-6">
                     <span class="block text-xs font-bold text-stone-500 uppercase tracking-wider mb-3">Quick Demo Logins (For Testing)</span>
+                    
+                    <?php if(!empty($staffs)): ?>
+                    <span class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mt-4 mb-2">Staff Logins</span>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
                         <?php 
-                        // Show first 6 clients to avoid cluttered UI
-                        $demoClients = array_slice($clients, 0, 6);
+                        $demoStaffs = array_slice($staffs, 0, 3);
+                        foreach ($demoStaffs as $ds): 
+                        ?>
+                            <button @click="quickLogin('<?= $ds['id'] ?>', '<?= htmlspecialchars($ds['first_name'] . ' ' . $ds['last_name']) ?>')" 
+                                    class="p-2.5 bg-stone-50 hover:bg-amber-500/10 border border-stone-200 hover:border-amber-500 rounded-xl text-left text-xs transition duration-200 group">
+                                <span class="font-bold text-stone-900 block group-hover:text-amber-800 truncate"><?= htmlspecialchars($ds['first_name'] . ' ' . $ds['last_name']) ?></span>
+                                <span class="text-[10px] text-stone-400 truncate block">Staff</span>
+                            </button>
+                        <?php endforeach; ?>
+                    </div>
+                    <?php endif; ?>
+
+                    <?php if(!empty($clients)): ?>
+                    <span class="block text-[10px] font-bold text-stone-400 uppercase tracking-wider mt-4 mb-2">Client Logins</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        <?php 
+                        $demoClients = array_slice($clients, 0, 3);
                         foreach ($demoClients as $dc): 
                         ?>
                             <button @click="quickLogin('<?= $dc['id'] ?>', '<?= htmlspecialchars($dc['first_name'] . ' ' . $dc['last_name']) ?>')" 
                                     class="p-2.5 bg-stone-50 hover:bg-amber-500/10 border border-stone-200 hover:border-amber-500 rounded-xl text-left text-xs transition duration-200 group">
                                 <span class="font-bold text-stone-900 block group-hover:text-amber-800 truncate"><?= htmlspecialchars($dc['first_name'] . ' ' . $dc['last_name']) ?></span>
-                                <span class="text-[10px] text-stone-400 truncate block">Click to sign in</span>
+                                <span class="text-[10px] text-stone-400 truncate block">Client</span>
                             </button>
                         <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
 
@@ -259,7 +277,7 @@
                         if (data.status === 'success') {
                             this.showToast(data.message);
                             setTimeout(() => {
-                                window.location.href = '<?= base_url("dashboard") ?>';
+                                window.location.href = data.redirect_url || '<?= base_url("dashboard") ?>';
                             }, 800);
                         } else {
                             this.showToast(data.message, 'error');
@@ -293,19 +311,19 @@
                 },
 
                 quickLogin(id, name) {
-                    fetch('<?= base_url("client/switch") ?>', {
+                    fetch('<?= base_url("quick-login") ?>', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded',
                         },
-                        body: `client_id=${id}`
+                        body: `user_id=${id}`
                     })
                     .then(res => res.json())
                     .then(data => {
                         if (data.status === 'success') {
-                            this.showToast(`Logged in successfully as ${name}!`);
+                            this.showToast(data.message);
                             setTimeout(() => {
-                                window.location.href = '<?= base_url("dashboard") ?>';
+                                window.location.href = data.redirect_url || '<?= base_url("dashboard") ?>';
                             }, 800);
                         } else {
                             this.showToast(data.message, 'error');
@@ -316,5 +334,6 @@
         }
     </script>
 
+    <?= $this->include('components/chatbot') ?>
 </body>
 </html>
