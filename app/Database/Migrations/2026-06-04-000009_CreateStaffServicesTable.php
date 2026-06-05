@@ -10,14 +10,10 @@ class CreateStaffServicesTable extends Migration
     {
         $this->forge->addField([
             'staff_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'service_id' => [
-                'type'       => 'INT',
-                'constraint' => 11,
-                'unsigned'   => true,
+                'type' => 'INT',
             ],
         ]);
         $this->forge->addKey(['staff_id', 'service_id'], true);

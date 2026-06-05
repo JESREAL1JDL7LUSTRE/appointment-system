@@ -10,14 +10,10 @@ class CreateUserRolesTable extends Migration
     {
         $this->forge->addField([
             'user_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'role_id' => [
-                'type'       => 'INT',
-                'constraint' => 11,
-                'unsigned'   => true,
+                'type' => 'INT',
             ],
         ]);
         $this->forge->addKey(['user_id', 'role_id'], true);

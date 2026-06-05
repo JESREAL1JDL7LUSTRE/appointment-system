@@ -3,3 +3,7 @@
 vendor/
 node_modules/
 tests/
+temp_error.json
+graphify-out/
+docs/
+*.md

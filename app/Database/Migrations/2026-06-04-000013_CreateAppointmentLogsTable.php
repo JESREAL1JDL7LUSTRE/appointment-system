@@ -11,19 +11,13 @@ class CreateAppointmentLogsTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'BIGINT',
-                'constraint'     => 20,
-                'unsigned'       => true,
                 'auto_increment' => true,
             ],
             'appointment_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'changed_by' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'action' => [
                 'type'       => 'VARCHAR',

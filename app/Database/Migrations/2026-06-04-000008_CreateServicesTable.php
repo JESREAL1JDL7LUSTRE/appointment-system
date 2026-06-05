@@ -11,8 +11,6 @@ class CreateServicesTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'INT',
-                'constraint'     => 11,
-                'unsigned'       => true,
                 'auto_increment' => true,
             ],
             'name' => [
@@ -24,8 +22,7 @@ class CreateServicesTable extends Migration
                 'null' => true,
             ],
             'duration_minutes' => [
-                'type'       => 'INT',
-                'constraint' => 11,
+                'type' => 'INT',
             ],
             'price' => [
                 'type'       => 'DECIMAL',
@@ -33,9 +30,8 @@ class CreateServicesTable extends Migration
                 'default'    => 0.00,
             ],
             'is_active' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'default'    => 1,
+                'type'    => 'SMALLINT',
+                'default' => 1,
             ],
             'created_at' => [
                 'type' => 'DATETIME',
