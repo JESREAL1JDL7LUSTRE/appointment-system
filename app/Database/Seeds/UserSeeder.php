@@ -19,10 +19,10 @@ class UserSeeder extends Seeder
         ];
         $this->db->table('roles')->insertBatch($roles);
 
-        // Fetch inserted role IDs (assuming sequential 1, 2, 3)
-        $adminRoleId = 1;
-        $staffRoleId = 2;
-        $clientRoleId = 3;
+        // Fetch inserted role IDs from DB (PostgreSQL-safe — no insertID())
+        $adminRoleId = $this->db->table('roles')->where('name', 'Administrator')->get()->getRow()->id;
+        $staffRoleId = $this->db->table('roles')->where('name', 'Staff')->get()->getRow()->id;
+        $clientRoleId = $this->db->table('roles')->where('name', 'Client')->get()->getRow()->id;
 
         // 2. Seed Admin User
         $adminData = [
@@ -30,14 +30,16 @@ class UserSeeder extends Seeder
             'password_hash' => password_hash('password123', PASSWORD_DEFAULT),
             'first_name'    => 'System',
             'last_name'     => 'Admin',
-            'phone'         => $faker->phoneNumber(),
+            'phone'         => '09000000000',
             'is_active'     => 1,
             'created_at'    => date('Y-m-d H:i:s'),
             'updated_at'    => date('Y-m-d H:i:s'),
         ];
         $this->db->table('users')->insert($adminData);
-        $adminId = $this->db->insertID();
-        
+
+        // PostgreSQL-safe: fetch ID by unique email
+        $adminId = $this->db->table('users')->where('email', 'admin@example.com')->get()->getRow()->id;
+
         $this->db->table('user_roles')->insert([
             'user_id' => $adminId,
             'role_id' => $adminRoleId,
@@ -45,8 +47,9 @@ class UserSeeder extends Seeder
 
         // 3. Seed Staff Members
         for ($i = 0; $i < 5; $i++) {
-            $staffData = [
-                'email'         => $faker->unique()->safeEmail(),
+            $staffEmail = $faker->unique()->safeEmail();
+            $staffData  = [
+                'email'         => $staffEmail,
                 'password_hash' => password_hash('staff123', PASSWORD_DEFAULT),
                 'first_name'    => $faker->firstName(),
                 'last_name'     => $faker->lastName(),
@@ -56,15 +59,15 @@ class UserSeeder extends Seeder
                 'updated_at'    => date('Y-m-d H:i:s'),
             ];
             $this->db->table('users')->insert($staffData);
-            $staffId = $this->db->insertID();
 
-            // Assign Role
+            // PostgreSQL-safe: fetch ID by unique email
+            $staffId = $this->db->table('users')->where('email', $staffEmail)->get()->getRow()->id;
+
             $this->db->table('user_roles')->insert([
                 'user_id' => $staffId,
                 'role_id' => $staffRoleId,
             ]);
 
-            // Create Staff Profile
             $this->db->table('staff_profiles')->insert([
                 'user_id'      => $staffId,
                 'title'        => $faker->jobTitle(),
@@ -75,8 +78,9 @@ class UserSeeder extends Seeder
 
         // 4. Seed Clients
         for ($i = 0; $i < 20; $i++) {
-            $clientData = [
-                'email'         => $faker->unique()->safeEmail(),
+            $clientEmail = $faker->unique()->safeEmail();
+            $clientData  = [
+                'email'         => $clientEmail,
                 'password_hash' => password_hash('client123', PASSWORD_DEFAULT),
                 'first_name'    => $faker->firstName(),
                 'last_name'     => $faker->lastName(),
@@ -86,15 +90,15 @@ class UserSeeder extends Seeder
                 'updated_at'    => date('Y-m-d H:i:s'),
             ];
             $this->db->table('users')->insert($clientData);
-            $clientId = $this->db->insertID();
 
-            // Assign Role
+            // PostgreSQL-safe: fetch ID by unique email
+            $clientId = $this->db->table('users')->where('email', $clientEmail)->get()->getRow()->id;
+
             $this->db->table('user_roles')->insert([
                 'user_id' => $clientId,
                 'role_id' => $clientRoleId,
             ]);
 
-            // Create Client Profile
             $this->db->table('client_profiles')->insert([
                 'user_id'        => $clientId,
                 'internal_notes' => 'New client. ' . $faker->sentence(),

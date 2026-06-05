@@ -63,5 +63,8 @@ EOF
 echo "==> Running database migrations..."
 php /var/www/html/spark migrate --all
 
+echo "==> Seeding database (idempotent - skips if data exists)..."
+php /var/www/html/spark db:seed MainSeeder || echo "==> Seeding skipped (data already exists)."
+
 echo "==> Starting Apache..."
 exec apache2-foreground
