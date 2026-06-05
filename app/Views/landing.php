@@ -9,6 +9,8 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OmniSchedule - Premium Appointment Scheduling & Wellness</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?= base_url('image/logo-icon-only.png') ?>">
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
