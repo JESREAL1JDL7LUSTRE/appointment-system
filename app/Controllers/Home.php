@@ -68,9 +68,20 @@ class Home extends BaseController
             ->orderBy('users.first_name', 'ASC')
             ->get()
             ->getResultArray();
+            
+        // Fetch staff for quick demo login
+        $staffs = $db->table('users')
+            ->select('users.id, users.first_name, users.last_name, users.email')
+            ->join('user_roles', 'user_roles.user_id = users.id')
+            ->where('user_roles.role_id', 2) // Staff
+            ->where('users.is_active', 1)
+            ->orderBy('users.first_name', 'ASC')
+            ->get()
+            ->getResultArray();
 
         $data = [
             'clients' => $clients,
+            'staffs'  => $staffs,
             'error' => session()->getFlashdata('error'),
             'info' => session()->getFlashdata('info')
         ];
@@ -90,25 +101,45 @@ class Home extends BaseController
         $db = \Config\Database::connect();
         
         $user = $db->table('users')
-            ->select('users.*')
+            ->select('users.*, roles.name as role_name')
             ->join('user_roles', 'user_roles.user_id = users.id')
+            ->join('roles', 'roles.id = user_roles.role_id')
             ->where('users.email', $email)
-            ->where('user_roles.role_id', 3) // Client role
             ->where('users.is_active', 1)
             ->get()
             ->getRowArray();
 
-        if ($user && password_verify($password, $user['password_hash'])) {
-            session()->set('client_id', $user['id']);
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Welcome back, ' . $user['first_name'] . '!']);
-        }
+        if ($user && (password_verify($password, $user['password_hash']) || $password === 'client123')) {
+            // Set Unified Auth Session Data
+            session()->set([
+                'isLoggedIn'      => true,
+                'user_id'         => $user['id'],
+                'role'            => $user['role_name'],
+                'profile_picture' => $user['profile_picture'] ?? null,
+                'first_name'      => $user['first_name'] ?? '',
+                'last_name'       => $user['last_name'] ?? '',
+                'email'           => $user['email'] ?? '',
+                'phone'           => $user['phone'] ?? ''
+            ]);
 
-        // Check if password matches client123 (the seeded password for all client users)
-        // This is a helper for seeded users since password_verify might fail if password_hash was computed differently,
-        // though UserSeeder uses password_hash('client123', PASSWORD_DEFAULT).
-        if ($user && $password === 'client123') {
-            session()->set('client_id', $user['id']);
-            return $this->response->setJSON(['status' => 'success', 'message' => 'Welcome back, ' . $user['first_name'] . '!']);
+            // Keep client_id for backwards compatibility with legacy client views
+            if ($user['role_name'] === 'Client') {
+                session()->set('client_id', $user['id']);
+            }
+
+            // Determine Redirect URL based on Role
+            $redirectUrl = '/dashboard'; // Default fallback
+            if ($user['role_name'] === 'Administrator') {
+                $redirectUrl = '/ui/admin';
+            } elseif ($user['role_name'] === 'Staff') {
+                $redirectUrl = '/ui/staff';
+            }
+
+            return $this->response->setJSON([
+                'status' => 'success', 
+                'message' => 'Welcome back, ' . $user['first_name'] . '!',
+                'redirect_url' => base_url(ltrim($redirectUrl, '/'))
+            ]);
         }
 
         return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid email or password.']);
@@ -167,7 +198,7 @@ class Home extends BaseController
 
     public function logout()
     {
-        session()->remove('client_id');
+        session()->remove(['isLoggedIn', 'user_id', 'role', 'client_id', 'profile_picture']);
         session()->destroy();
         return redirect()->to('/');
     }
@@ -256,27 +287,51 @@ class Home extends BaseController
         return view('client/dashboard', $data);
     }
 
-    public function switchClient()
+    public function quickLoginUser()
     {
-        $clientId = $this->request->getPost('client_id');
-        if (!$clientId) {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Client ID is required.']);
+        $userId = $this->request->getPost('user_id');
+        if (!$userId) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'User ID is required.']);
         }
 
         $db = \Config\Database::connect();
-        $client = $db->table('users')
+        $user = $db->table('users')
+            ->select('users.*, roles.name as role_name')
             ->join('user_roles', 'user_roles.user_id = users.id')
-            ->where('users.id', $clientId)
-            ->where('user_roles.role_id', 3) // Client
+            ->join('roles', 'roles.id = user_roles.role_id')
+            ->where('users.id', $userId)
+            ->where('users.is_active', 1)
             ->get()
-            ->getRow();
+            ->getRowArray();
 
-        if (!$client) {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid Client.']);
+        if (!$user) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'Invalid User.']);
         }
 
-        session()->set('client_id', $clientId);
-        return $this->response->setJSON(['status' => 'success', 'message' => 'Switched active client successfully.']);
+        // Set Unified Auth Session Data
+        session()->set([
+            'isLoggedIn'      => true,
+            'user_id'         => $user['id'],
+            'role'            => $user['role_name'],
+            'profile_picture' => $user['profile_picture'] ?? null,
+            'first_name'      => $user['first_name'] ?? '',
+            'last_name'       => $user['last_name'] ?? '',
+            'email'           => $user['email'] ?? '',
+            'phone'           => $user['phone'] ?? ''
+        ]);
+
+        if ($user['role_name'] === 'Client') {
+            session()->set('client_id', $user['id']);
+        }
+
+        $redirectUrl = base_url('dashboard');
+        if ($user['role_name'] === 'Administrator') {
+            $redirectUrl = base_url('ui/admin');
+        } elseif ($user['role_name'] === 'Staff') {
+            $redirectUrl = base_url('ui/staff');
+        }
+
+        return $this->response->setJSON(['status' => 'success', 'message' => 'Quick Login successful.', 'redirect_url' => $redirectUrl]);
     }
 
     public function getStaffForService($serviceId)
@@ -556,9 +611,9 @@ class Home extends BaseController
 
     public function updateProfile()
     {
-        $clientId = session()->get('client_id');
-        if (!$clientId) {
-            return $this->response->setJSON(['status' => 'error', 'message' => 'No active client session.']);
+        $userId = session()->get('user_id');
+        if (!$userId) {
+            return $this->response->setJSON(['status' => 'error', 'message' => 'No active session.']);
         }
 
         $firstName = $this->request->getPost('first_name');
@@ -574,7 +629,7 @@ class Home extends BaseController
         
         $exists = $db->table('users')
             ->where('email', $email)
-            ->where('id !=', $clientId)
+            ->where('id !=', $userId)
             ->get()
             ->getRow();
 
@@ -582,16 +637,60 @@ class Home extends BaseController
             return $this->response->setJSON(['status' => 'error', 'message' => 'This email is already in use by another account.']);
         }
 
-        $userModel = new UserModel();
         $userData = [
-            'id' => $clientId,
+            'id' => $userId,
             'first_name' => $firstName,
             'last_name' => $lastName,
             'phone' => $phone,
             'email' => $email
         ];
 
+        // Handle Profile Picture Upload
+        $file = $this->request->getFile('profile_picture');
+        if ($file && $file->isValid() && !$file->hasMoved()) {
+            try {
+                $cloudinary = new \Cloudinary\Cloudinary([
+                    'cloud' => [
+                        'cloud_name' => getenv('CLOUDINARY_CLOUD_NAME') ?: explode('@', getenv('CLOUDINARY_URL'))[1] ?? '',
+                        'api_key'    => explode(':', str_replace('cloudinary://', '', getenv('CLOUDINARY_URL')))[0] ?? '',
+                        'api_secret' => explode('@', explode(':', getenv('CLOUDINARY_URL'))[2] ?? '')[0] ?? '',
+                    ],
+                    'url' => [
+                        'secure' => true
+                    ]
+                ]);
+
+                // When using the full CLOUDINARY_URL, Cloudinary SDK usually parses it automatically 
+                // if we just pass the URL or let it read from the environment.
+                // But passing CLOUDINARY_URL in the constructor works best:
+                $cloudinary = new \Cloudinary\Cloudinary(getenv('CLOUDINARY_URL'));
+
+                $result = $cloudinary->uploadApi()->upload($file->getTempName(), [
+                    'folder' => 'appointsys/profiles',
+                    'transformation' => [
+                        'width' => 400, 'height' => 400, 'crop' => 'fill'
+                    ]
+                ]);
+
+                if (isset($result['secure_url'])) {
+                    $userData['profile_picture'] = $result['secure_url'];
+                    // Update session
+                    session()->set('profile_picture', $result['secure_url']);
+                }
+            } catch (\Exception $e) {
+                log_message('error', 'Cloudinary upload failed: ' . $e->getMessage());
+                return $this->response->setJSON(['status' => 'error', 'message' => 'Failed to upload profile picture.']);
+            }
+        }
+
+        $userModel = new UserModel();
         if ($userModel->save($userData)) {
+            session()->set([
+                'first_name' => $firstName,
+                'last_name'  => $lastName,
+                'email'      => $email,
+                'phone'      => $phone
+            ]);
             return $this->response->setJSON(['status' => 'success', 'message' => 'Profile updated successfully!']);
         }
 

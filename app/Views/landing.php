@@ -8,7 +8,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA - Premium Appointment Scheduling & Wellness</title>
+    <title>OmniSchedule - Premium Appointment Scheduling & Wellness</title>
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
@@ -21,12 +21,9 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
     <!-- Top Navigation Header -->
     <header class="bg-white/80 backdrop-blur-md border-b border-stone-200/50 fixed top-0 left-0 right-0 z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Logo -->
+                <!-- Logo -->
             <div class="flex items-center gap-2">
-                <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
-                    <i class="ph-bold ph-sparkle text-amber-600 text-2xl"></i>
-                </div>
-                <span class="font-serif text-2xl font-bold tracking-wider text-amber-800">AURA</span>
+                <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-10 w-auto">
             </div>
 
             <!-- Desktop Nav Links -->
@@ -36,13 +33,12 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
                 <a href="#testimonials" class="hover:text-amber-700 transition">Testimonials</a>
                 <a href="#faq" class="hover:text-amber-700 transition">FAQ</a>
                 <a href="#portals" class="hover:text-amber-700 transition">Portals</a>
-                <a href="<?= $authLinkUrl ?>" class="hover:text-amber-700 transition"><?= $authLinkText ?></a>
             </nav>
 
             <!-- CTA Buttons -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="<?= $bookUrl ?>" class="bg-amber-500 hover:bg-amber-600 text-slate-955 font-bold px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/10">
-                    Book Online
+                <a href="<?= $authLinkUrl ?>" class="bg-amber-500 hover:bg-amber-600 text-slate-955 font-bold px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-amber-500/10">
+                    <?= $authLinkText ?>
                 </a>
             </div>
 
@@ -59,10 +55,9 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
             <a href="#testimonials" @click="mobileMenuOpen = false" class="block font-semibold text-stone-600 py-1 hover:text-amber-700">Testimonials</a>
             <a href="#faq" @click="mobileMenuOpen = false" class="block font-semibold text-stone-600 py-1 hover:text-amber-700">FAQ</a>
             <a href="#portals" @click="mobileMenuOpen = false" class="block font-semibold text-stone-600 py-1 hover:text-amber-700">Portals</a>
-            <a href="<?= $authLinkUrl ?>" @click="mobileMenuOpen = false" class="block font-semibold text-stone-600 py-1 hover:text-amber-700"><?= $authLinkText ?></a>
             <div class="pt-3 border-t border-stone-100 flex flex-col gap-2">
-                <a href="<?= $bookUrl ?>" class="bg-amber-500 hover:bg-amber-600 text-slate-955 text-center font-bold px-4 py-2.5 rounded-xl text-sm transition shadow-lg">
-                    Book Online
+                <a href="<?= $authLinkUrl ?>" class="bg-amber-500 hover:bg-amber-600 text-slate-955 text-center font-bold px-4 py-2.5 rounded-xl text-sm transition shadow-lg">
+                    <?= $authLinkText ?>
                 </a>
             </div>
         </div>
@@ -75,7 +70,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="inline-flex items-center gap-1.5 bg-amber-500/10 border border-amber-500/20 text-amber-800 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
-                <i class="ph-bold ph-sparkle text-sm"></i> Elegant Wellness Bookings
+                Elegant Wellness Bookings
             </div>
             
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 tracking-tight leading-tight max-w-4xl mx-auto mb-6">
@@ -220,7 +215,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-amber-700 font-serif text-sm font-semibold tracking-wider uppercase mb-2 block">Client Reviews</span>
                 <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900">What Our Clients Say</h2>
-                <p class="text-stone-500 mt-3 text-sm sm:text-base">Read feedback from clients who have experienced Aura's wellness consultations.</p>
+                <p class="text-stone-500 mt-3 text-sm sm:text-base">Read feedback from clients who have experienced OmniSchedule's wellness consultations.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -320,7 +315,7 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-amber-400 font-serif text-sm font-semibold tracking-wider uppercase mb-2 block">System Portals</span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Access Aura Portal Applications</h2>
+                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white">Access OmniSchedule Portal Applications</h2>
                 <p class="text-slate-400 mt-2 text-sm sm:text-base">Switch between customer-facing booking dashboard, staff calendars, or admin controls.</p>
             </div>
 
@@ -377,9 +372,10 @@ $authLinkUrl = !empty($activeClient) ? base_url('dashboard') : base_url('login')
                 <a href="#testimonials" class="hover:text-amber-700">Testimonials</a>
                 <a href="#faq" class="hover:text-amber-700">FAQ</a>
             </div>
-            <p class="text-stone-400">&copy; <?= date('Y') ?> Aura Appointments. All rights reserved.</p>
+            <p class="text-stone-400">&copy; <?= date('Y') ?> OmniSchedule Appointments. All rights reserved.</p>
         </div>
     </footer>
 
+    <?= $this->include('components/chatbot') ?>
 </body>
 </html>

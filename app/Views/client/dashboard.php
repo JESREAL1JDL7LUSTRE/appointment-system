@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA - Client Portal</title>
+    <title>OmniSchedule - Client Portal</title>
     <!-- Tailwind CSS -->
     <link href="<?= base_url('css/app.css') ?>" rel="stylesheet">
     <!-- Phosphor Icons -->
@@ -53,10 +53,7 @@
             <div class="flex items-center gap-8">
                 <!-- Logo -->
                 <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
-                        <i class="ph-bold ph-sparkle text-amber-400 text-2xl"></i>
-                    </div>
-                    <span class="font-serif text-2xl font-bold tracking-wider text-amber-400">AURA</span>
+                    <img src="<?= base_url('image/logo-3.png') ?>" alt="OmniSchedule Logo" class="h-10 w-auto">
                 </div>
                 <!-- Navigation -->
                 <nav class="hidden md:flex items-center gap-1">
@@ -617,7 +614,16 @@
             </div>
             
             <div class="bg-white rounded-3xl border border-stone-200 shadow-sm p-6 sm:p-8">
-                <form @submit.prevent="updateProfile()" class="space-y-6">
+                <form @submit.prevent="updateProfile()" class="space-y-6" enctype="multipart/form-data">
+                    <!-- Profile Picture -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-bold text-stone-700 uppercase tracking-wider">Profile Picture</label>
+                        <div class="flex items-center gap-4">
+                            <img :src="profileForm.profile_picture || 'https://ui-avatars.com/api/?name=' + encodeURIComponent(profileForm.first_name + '+' + profileForm.last_name) + '&background=fef3c7&color=92400e'" class="w-16 h-16 rounded-full object-cover border border-stone-200">
+                            <input type="file" x-ref="profilePictureInput" accept="image/*" class="text-sm text-stone-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-sm file:font-bold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100">
+                        </div>
+                    </div>
+
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- First Name -->
                         <div class="space-y-2">
@@ -691,7 +697,7 @@
 
     <!-- UI Footer -->
     <footer class="bg-stone-100 border-t border-stone-200/60 py-6 mt-12 text-center text-xs text-stone-500 mb-20 md:mb-0">
-        <p>&copy; <?= date('Y') ?> Aura Appointments. All rights reserved.</p>
+        <p>&copy; <?= date('Y') ?> OmniSchedule Appointments. All rights reserved.</p>
     </footer>
 
     <!-- Alpine.js Application Logic -->
@@ -699,7 +705,7 @@
         function clientPortal() {
             return {
                 // SPA Navigation
-                activeTab: 'home',
+                activeTab: ['home', 'book', 'bookings', 'profile'].includes(window.location.hash.substring(1)) ? window.location.hash.substring(1) : 'home',
                 toasts: [],
                 toastId: 0,
                 
@@ -735,13 +741,25 @@
                     first_name: '<?= $activeClient ? htmlspecialchars($activeClient['first_name'], ENT_QUOTES) : "" ?>',
                     last_name: '<?= $activeClient ? htmlspecialchars($activeClient['last_name'], ENT_QUOTES) : "" ?>',
                     email: '<?= $activeClient ? htmlspecialchars($activeClient['email'], ENT_QUOTES) : "" ?>',
-                    phone: '<?= $activeClient ? htmlspecialchars($activeClient['phone'], ENT_QUOTES) : "" ?>'
+                    phone: '<?= $activeClient ? htmlspecialchars($activeClient['phone'], ENT_QUOTES) : "" ?>',
+                    profile_picture: '<?= session()->get("profile_picture") ? htmlspecialchars(session()->get("profile_picture"), ENT_QUOTES) : ($activeClient["profile_picture"] ?? "") ?>'
                 },
 
                 // Booking History Filter
                 bookingFilter: 'all',
 
                 init() {
+                    // Watch for browser back/forward buttons
+                    window.addEventListener('hashchange', () => {
+                        const hash = window.location.hash.substring(1);
+                        if (['home', 'book', 'bookings', 'profile'].includes(hash)) {
+                            if (this.activeTab !== hash) {
+                                this.activeTab = hash;
+                                if (hash !== 'book') this.resetWizard();
+                            }
+                        }
+                    });
+
                     // Min Date for date picker
                     const today = new Date();
                     const yyyy = today.getFullYear();
@@ -771,6 +789,7 @@
 
                 setTab(tab) {
                     this.activeTab = tab;
+                    window.location.hash = tab;
                     // Reset wizard on changing tab away from book
                     if(tab !== 'book') {
                         this.resetWizard();
@@ -831,24 +850,38 @@
                 // Profile Updates
                 updateProfile() {
                     this.profileSaving = true;
-                    const params = new URLSearchParams(this.profileForm);
+                    
+                    const formData = new FormData();
+                    formData.append('first_name', this.profileForm.first_name);
+                    formData.append('last_name', this.profileForm.last_name);
+                    formData.append('email', this.profileForm.email);
+                    formData.append('phone', this.profileForm.phone);
+                    
+                    if (this.$refs.profilePictureInput.files.length > 0) {
+                        formData.append('profile_picture', this.$refs.profilePictureInput.files[0]);
+                    }
 
-                    fetch('<?= base_url("client/profile/update") ?>', {
+                    fetch('<?= base_url('update-profile') ?>', {
                         method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        body: params.toString()
+                        body: formData
                     })
                     .then(res => res.json())
                     .then(data => {
                         this.profileSaving = false;
                         if (data.status === 'success') {
-                            this.showToast(data.message);
-                            setTimeout(() => window.location.reload(), 1000);
+                            this.showToast(data.message, 'success');
+                            if (this.$refs.profilePictureInput.files.length > 0) {
+                                // Simple reload to show new picture (or could update src manually)
+                                setTimeout(() => window.location.reload(), 1000);
+                            }
                         } else {
                             this.showToast(data.message, 'error');
                         }
+                    })
+                    .catch(err => {
+                        console.error(err);
+                        this.profileSaving = false;
+                        this.showToast('Network error updating profile.', 'error');
                     });
                 },
 
@@ -975,5 +1008,6 @@
             };
         }
     </script>
+    <?= $this->include('components/chatbot') ?>
 </body>
 </html>
