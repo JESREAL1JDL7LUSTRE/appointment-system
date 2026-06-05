@@ -11,24 +11,18 @@ class CreateNotificationsTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'BIGINT',
-                'constraint'     => 20,
-                'unsigned'       => true,
                 'auto_increment' => true,
             ],
             'user_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'appointment_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
-                'null'       => true,
+                'type' => 'BIGINT',
+                'null' => true,
             ],
             'type' => [
-                'type'       => 'ENUM',
-                'constraint' => ['email', 'sms'],
+                'type'       => 'VARCHAR',
+                'constraint' => '10',
                 'default'    => 'email',
             ],
             'category' => [
@@ -37,8 +31,8 @@ class CreateNotificationsTable extends Migration
                 'comment'    => 'reminder, confirmation, cancellation',
             ],
             'status' => [
-                'type'       => 'ENUM',
-                'constraint' => ['pending', 'sent', 'failed'],
+                'type'       => 'VARCHAR',
+                'constraint' => '10',
                 'default'    => 'pending',
             ],
             'scheduled_at' => [

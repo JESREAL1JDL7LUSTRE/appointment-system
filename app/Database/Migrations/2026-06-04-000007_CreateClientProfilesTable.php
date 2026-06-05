@@ -10,9 +10,7 @@ class CreateClientProfilesTable extends Migration
     {
         $this->forge->addField([
             'user_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'internal_notes' => [
                 'type' => 'TEXT',

@@ -11,19 +11,14 @@ class CreateWorkingHoursTable extends Migration
         $this->forge->addField([
             'id' => [
                 'type'           => 'BIGINT',
-                'constraint'     => 20,
-                'unsigned'       => true,
                 'auto_increment' => true,
             ],
             'staff_id' => [
-                'type'       => 'BIGINT',
-                'constraint' => 20,
-                'unsigned'   => true,
+                'type' => 'BIGINT',
             ],
             'day_of_week' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'comment'    => '0=Sunday, 1=Monday, etc.',
+                'type'    => 'SMALLINT',
+                'comment' => '0=Sunday, 1=Monday, etc.',
             ],
             'start_time' => [
                 'type' => 'TIME',
@@ -32,9 +27,8 @@ class CreateWorkingHoursTable extends Migration
                 'type' => 'TIME',
             ],
             'is_active' => [
-                'type'       => 'TINYINT',
-                'constraint' => 1,
-                'default'    => 1,
+                'type'    => 'SMALLINT',
+                'default' => 1,
             ],
         ]);
         $this->forge->addKey('id', true);
