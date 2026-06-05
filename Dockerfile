@@ -30,8 +30,13 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Install PHP dependencies (no dev)
 RUN composer install --no-dev --optimize-autoloader
 
-# Set permissions for writable directory
-RUN chown -R www-data:www-data /var/www/html/writable \
+# Create CI4 writable directories and set permissions
+RUN mkdir -p /var/www/html/writable/cache \
+              /var/www/html/writable/logs \
+              /var/www/html/writable/session \
+              /var/www/html/writable/uploads \
+              /var/www/html/writable/debugbar \
+    && chown -R www-data:www-data /var/www/html/writable \
     && chmod -R 775 /var/www/html/writable
 
 # Copy and set executable permissions on startup script
