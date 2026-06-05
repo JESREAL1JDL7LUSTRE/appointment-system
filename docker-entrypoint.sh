@@ -54,6 +54,8 @@ database.default.username = ${DB_USER}
 database.default.password = ${DB_PASS}
 database.default.DBDriver = Postgre
 database.default.port     = ${DB_PORT}
+database.default.charset  = utf8
+database.default.DBCollat =
 
 CLOUDINARY_URL='${CLOUDINARY_URL}'
 EOF
